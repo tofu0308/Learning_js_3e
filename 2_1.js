@@ -9,12 +9,19 @@ $(document).ready(function(){
 
 	/* draw */
 	paper.view.draw;
-	let c;
+	let tool = new Tool();;
 	
+	/*
 	for(let x=25; x<400; x+=50){
 		for (let y=25; y<400; y+=50) {
 			c = Shape.Circle(x, y, 20);
 			c.fillColor  =  'green';
 		}
+	}
+	*/
+
+	tool.onMouseDown = function(event){
+		let c = Shape.Circle(event.point.x, event.point.y, 20);
+		c.fillColor = 'green';
 	}
 });
