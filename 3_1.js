@@ -15,3 +15,6 @@ console.log(room1);
 
 let currentRoom = room1;
 console.log(currentRoom);
+
+const x = 0.1 + 0.2;
+console.log(x);
