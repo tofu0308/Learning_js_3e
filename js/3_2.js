@@ -23,3 +23,17 @@ const price = `900`;
 const dollor = `価格は${price}です`
 
 console.log(dollor);
+
+//3_7_4
+const mulutiLine =`line1
+line2
+line3
+line4`;
+
+const mulutiLine2 = "line2_1\n" +
+ "line2_2\n" +
+ "line2_3\n" +
+ "line2_4\n";
+
+console.log(mulutiLine);
+console.log(mulutiLine2);
