@@ -15,9 +15,11 @@ console.log(d1 === d3);
 const newLine = `line1\nline2`;
 const bq = `バッククォートをエスケープ=>　\``
 
+console.log(newLine);
+console.log(bq);
+
+//3_7_3 : テンプレートリテラル
 const price = `900`;
 const dollor = `価格は${price}です`
 
-console.log(newLine);
-console.log(bq);
 console.log(dollor);
