@@ -52,3 +52,13 @@ let f =false;
 
 console.log(t);
 console.log(f);
+
+//3_9 シンボル
+const RED = Symbol();
+const BLUE = Symbol();
+const ORANGE = Symbol(`橙`);
+
+console.log(RED);
+console.log(BLUE);
+console.log(ORANGE);
+
