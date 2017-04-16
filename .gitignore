@@ -1,0 +1,6 @@
+.DS_Store
+guide/
+gulpfile.js
+node_modules/
+package.json
+scss/
