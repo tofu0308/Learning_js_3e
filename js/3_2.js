@@ -45,7 +45,6 @@ const result2 = 3 * '30';
 console.log(result1);
 console.log(result2);
 
-
 //3_8
 let t = true;
 let f =false;
@@ -61,4 +60,53 @@ const ORANGE = Symbol(`橙`);
 console.log(RED);
 console.log(BLUE);
 console.log(ORANGE);
+
+//3_10
+let currentTemp;
+console.log(currentTemp);
+
+currentTemp = null;
+console.log(currentTemp);
+
+currentTemp = 26.5;
+console.log(currentTemp);
+
+currentTemp = undefined;
+console.log(currentTemp);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
