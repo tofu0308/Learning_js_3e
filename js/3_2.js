@@ -44,3 +44,11 @@ const result2 = 3 * '30';
 
 console.log(result1);
 console.log(result2);
+
+
+//3_8
+let t = true;
+let f =false;
+
+console.log(t);
+console.log(f);
