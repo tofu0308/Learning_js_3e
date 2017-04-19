@@ -125,3 +125,17 @@ console.log(n);
 
 const m = f ? 1:0;
 console.log(m);
+
+
+//3_18_2
+const num2 = 1234.56;
+const num2Str = num2.toString();
+
+console.log(num2);
+console.log(num2Str);
+
+console.log(new Date().toString());
+
+const arr2Str= ["a",2,3].toString();
+console.log(arr2Str);
+
