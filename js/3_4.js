@@ -139,3 +139,23 @@ console.log(new Date().toString());
 const arr2Str= ["a",2,3].toString();
 console.log(arr2Str);
 
+//3_18_3
+const nn = 0;
+const bb0 = !nn;
+const bb1 = !!nn;
+const bb2 = Boolean(nn);
+
+console.log(nn);
+console.log(bb0);
+console.log(bb1);
+console.log(bb2);
+
+const mm = 1;
+const cc0 = !mm;
+const cc1 = !!mm;
+const cc2 = Boolean(mm);
+
+console.log(mm);
+console.log(cc0);
+console.log(cc1);
+console.log(cc2);
