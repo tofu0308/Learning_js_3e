@@ -67,3 +67,21 @@ console.log(a9[81.3]);
 console.log(a9[-2]);
 console.log(a9);
 console.log(a9.length);
+
+//3_15
+const now = new Date();
+console.log(now);
+
+const halloween = new Date(2016, 9, 31);
+console.log(halloween);
+
+const halloweenParty = new Date(2016, 9, 31, 19, 0);
+console.log(halloweenParty);
+console.log(halloweenParty.getFullYear());
+console.log(halloweenParty.getMonth());
+console.log(halloweenParty.getDate());
+console.log(halloweenParty.getDay());
+console.log(halloweenParty.getHours());
+console.log(halloweenParty.getMinutes());
+console.log(halloweenParty.getSeconds());
+console.log(halloweenParty.getMilliseconds());
