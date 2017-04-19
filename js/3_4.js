@@ -67,3 +67,95 @@ console.log(a9[81.3]);
 console.log(a9[-2]);
 console.log(a9);
 console.log(a9.length);
+
+//3_15
+const now = new Date();
+console.log(now);
+
+const halloween = new Date(2016, 9, 31);
+console.log(halloween);
+
+const halloweenParty = new Date(2016, 9, 31, 19, 0);
+console.log(halloweenParty);
+console.log(halloweenParty.getFullYear());
+console.log(halloweenParty.getMonth());
+console.log(halloweenParty.getDate());
+console.log(halloweenParty.getDay());
+console.log(halloweenParty.getHours());
+console.log(halloweenParty.getMinutes());
+console.log(halloweenParty.getSeconds());
+console.log(halloweenParty.getMilliseconds());
+
+
+//3_16
+const email = /\b[a-z0-9]+@[a-z_-]+(?:\.[a-z]+)+b/;
+const phone = /(:?\+1)?(:?\(\d\{3}\)\s?)|\d\{3}[\s-]?d{4}/;
+
+//3_18
+
+//str => num
+const numStr = `33.3`;
+const num = Number(numStr);
+console.log(numStr);
+console.log(num);
+
+// parse
+const v = parseInt("16 volts", 10);
+console.log(v);
+
+const v2 = parseInt("3a", 16);
+console.log(v2);
+
+const k = parseFloat("15.5 kph");
+console.log(k);
+
+// new date => unixtime
+const date = new Date;
+console.log(date);
+
+const dateTs = date.valueOf();
+console.log(dateTs);
+
+// true | false => 1|0
+const t = true;
+const f = false;
+
+const n = t ? 1:0;
+console.log(n);
+
+const m = f ? 1:0;
+console.log(m);
+
+
+//3_18_2
+const num2 = 1234.56;
+const num2Str = num2.toString();
+
+console.log(num2);
+console.log(num2Str);
+
+console.log(new Date().toString());
+
+const arr2Str= ["a",2,3].toString();
+console.log(arr2Str);
+
+//3_18_3
+const nn = 0;
+const bb0 = !nn;
+const bb1 = !!nn;
+const bb2 = Boolean(nn);
+
+console.log(nn);
+console.log(bb0);
+console.log(bb1);
+console.log(bb2);
+
+const mm = 1;
+const cc0 = !mm;
+const cc1 = !!mm;
+const cc2 = Boolean(mm);
+
+console.log(mm);
+console.log(cc0);
+console.log(cc1);
+console.log(cc2);
