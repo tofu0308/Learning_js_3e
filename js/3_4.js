@@ -90,3 +90,38 @@ console.log(halloweenParty.getMilliseconds());
 //3_16
 const email = /\b[a-z0-9]+@[a-z_-]+(?:\.[a-z]+)+b/;
 const phone = /(:?\+1)?(:?\(\d\{3}\)\s?)|\d\{3}[\s-]?d{4}/;
+
+//3_18
+
+//str => num
+const numStr = `33.3`;
+const num = Number(numStr);
+console.log(numStr);
+console.log(num);
+
+// parse
+const v = parseInt("16 volts", 10);
+console.log(v);
+
+const v2 = parseInt("3a", 16);
+console.log(v2);
+
+const k = parseFloat("15.5 kph");
+console.log(k);
+
+// new date => unixtime
+const date = new Date;
+console.log(date);
+
+const dateTs = date.valueOf();
+console.log(dateTs);
+
+// true | false => 1|0
+const t = true;
+const f = false;
+
+const n = t ? 1:0;
+console.log(n);
+
+const m = f ? 1:0;
+console.log(m);
