@@ -19,3 +19,5 @@ for(let temp, i = 0, j = 1; j < 30; temp = i, i = j, j = i + temp)
 let s = '3';
 for(; s.length < 10; s = ' ' + s);
 console.log(s);
+
+
