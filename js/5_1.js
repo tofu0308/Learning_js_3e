@@ -93,7 +93,13 @@ console.log(isNaN(3));//false
 console.log(isNaN(3.6));//false
 console.log(isNaN("hoge"));//true
 
+console.log("---------------");
 
+let epsilon = 0;
+while(true){
+    epsilon += 0.1;
+    console.log(epsilon);
 
-
-
+    if(Math.abs(epsilon - 0.3) < Number.EPSILON) break;
+}
+console.log(`${epsilon}で停止`);
