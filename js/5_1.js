@@ -103,3 +103,11 @@ while(true){
     if(Math.abs(epsilon - 0.3) < Number.EPSILON) break;
 }
 console.log(`${epsilon}で停止`);
+
+
+//5_5
+console.log("--------5_5-------");
+
+console.log(3 + 5 + "8");
+console.log("3" + 5 + 8);
+
