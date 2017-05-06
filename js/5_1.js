@@ -42,3 +42,30 @@ console.log(y);
 //5_3
 console.log("--------5_3-------");
 console.log(8/2+3*(4*2-1));
+
+let xx = 3, yy;
+xx += yy	 = 6*5/2;
+console.log(xx);
+
+//5_4
+console.log("--------5_4-------");
+//5_4_1
+const v = 5;
+const w = "5";
+
+console.log(v === w);//false
+console.log(v !== w);//true
+console.log(v === Number(w));//true
+console.log(v !== Number(w));//false
+console.log(v == w);//true
+console.log(v != w);//false
+
+console.log("---------------");
+
+const t = {name: "あるオブジェクト"};
+const u = {name: "あるオブジェクト"};
+
+console.log(t === u);//flase
+console.log(t !== u);//true
+console.log(t == u );//false
+console.log(t != u);//true
