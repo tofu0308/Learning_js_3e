@@ -69,3 +69,20 @@ console.log(t === u);//flase
 console.log(t !== u);//true
 console.log(t == u );//false
 console.log(t != u);//true
+
+console.log("---------------");
+
+//5_4_2
+console.log(3 > 5);//false
+console.log(3 >= 5);//false
+console.log(3 < 5);//true
+console.log(3 <= 5);//true
+
+console.log(5 > 5);//false
+console.log(5 >= 5);//true
+console.log(5 < 5);//false
+console.log(5 <= 5);//true
+
+console.log("---------------");
+
+
