@@ -39,3 +39,6 @@ console.log(y-- + --y);
 console.log(--y + y--);
 console.log(y);
 
+//5_3
+console.log("--------5_3-------");
+console.log(8/2+3*(4*2-1));
