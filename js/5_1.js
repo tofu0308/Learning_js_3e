@@ -85,4 +85,15 @@ console.log(5 <= 5);//true
 
 console.log("---------------");
 
+//5_4_3
+console.log(NaN === NaN);//false
+console.log(NaN == NaN);//false
+console.log(isNaN(NaN));//true
+console.log(isNaN(3));//false
+console.log(isNaN(3.6));//false
+console.log(isNaN("hoge"));//true
+
+
+
+
 
