@@ -172,3 +172,17 @@ if("false"){
 }else{
 	console.log("f");
 }//t
+
+console.log("---------------");
+
+//5_6_3
+//短絡評価
+const skipIt = true;
+const doIt = false;
+let eval = 0;
+
+const result = skipIt || eval++;
+console.log(eval);
+
+const result2 = doIt && eval++;
+console.log(eval);
