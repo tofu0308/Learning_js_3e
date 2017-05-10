@@ -184,5 +184,18 @@ let eval = 0;
 const result = skipIt || eval++;
 console.log(eval);
 
-const result2 = doIt && eval++;
+const result2 = doIt &&	 eval++;
 console.log(eval);
+
+//5_7
+console.log("--------5_7-------");
+
+const doIt3 = false;
+const result3 = doIt3 ? "Did it!" : "Didn't do it.";
+console.log(result3);//Didn't do it.
+
+const doIt4 = true;
+const result4 = doIt4 ? "Did it!" : "Didn't do it.";
+console.log(result4);//Do it!
+
+
