@@ -224,3 +224,25 @@ console.log(formatBinary(FLAG_READ));
 console.log(formatBinary(FLAG_WRITE));
 console.log(formatBinary(FLAG_EXECUTE));
 console.log(formatBinary(FLAG_READ|FLAG_WRITE));
+
+console.log("---------------");
+
+let p = FLAG_READ | FLAG_WRITE;
+console.log(formatBinary(p));
+
+let hasWrite = p & FLAG_WRITE ? "yes" : "no";
+console.log(`書き込みパーミッション:${hasWrite}`);
+
+let hasExecute = p & FLAG_EXECUTE ? "yes" : "no";
+console.log(`実行パーミッション:${hasExecute}`);
+
+console.log(formatBinary(p));
+
+p = p ^ FLAG_WRITE;
+console.log(formatBinary(p));
+
+p = p ^ FLAG_WRITE;
+console.log(formatBinary(p));
+
+const hasReadAndWrite = p & (FLAG_READ) ? "可" : "不可";
+console.log(`読み書き${hasReadAndWrite}`);
