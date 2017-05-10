@@ -198,4 +198,13 @@ const doIt4 = true;
 const result4 = doIt4 ? "Did it!" : "Didn't do it.";
 console.log(result4);//Do it!
 
+//5_8
+console.log("--------5_8-------");
 
+let x8 = 0, y8 = 10, z;
+z8 = (x8++, y8++);
+console.log(z8);
+
+x8 = 0, y8 =10;
+z8 = x8++, y8++;
+console.log(z8);
