@@ -208,3 +208,19 @@ console.log(z8);
 x8 = 0, y8 =10;
 z8 = x8++, y8++;
 console.log(z8);
+
+//5_10
+console.log("--------5_10-------");
+
+function formatBinary(x){
+	const y = x.toString(2);
+	return("0000" + y).substr(-4);
+}
+
+const FLAG_READ = 1;
+const FLAG_WRITE = 2;
+const FLAG_EXECUTE = 4;
+console.log(formatBinary(FLAG_READ));
+console.log(formatBinary(FLAG_WRITE));
+console.log(formatBinary(FLAG_EXECUTE));
+console.log(formatBinary(FLAG_READ|FLAG_WRITE));
