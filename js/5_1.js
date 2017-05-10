@@ -184,5 +184,93 @@ let eval = 0;
 const result = skipIt || eval++;
 console.log(eval);
 
-const result2 = doIt && eval++;
+const result2 = doIt &&	 eval++;
 console.log(eval);
+
+//5_7
+console.log("--------5_7-------");
+
+const doIt3 = false;
+const result3 = doIt3 ? "Did it!" : "Didn't do it.";
+console.log(result3);//Didn't do it.
+
+const doIt4 = true;
+const result4 = doIt4 ? "Did it!" : "Didn't do it.";
+console.log(result4);//Do it!
+
+//5_8
+console.log("--------5_8-------");
+
+let x8 = 0, y8 = 10, z;
+z8 = (x8++, y8++);
+console.log(z8);
+
+x8 = 0, y8 =10;
+z8 = x8++, y8++;
+console.log(z8);
+
+//5_10
+console.log("--------5_10-------");
+
+function formatBinary(x){
+	const y = x.toString(2);
+	return("0000" + y).substr(-4);
+}
+
+const FLAG_READ = 1;
+const FLAG_WRITE = 2;
+const FLAG_EXECUTE = 4;
+console.log(formatBinary(FLAG_READ));
+console.log(formatBinary(FLAG_WRITE));
+console.log(formatBinary(FLAG_EXECUTE));
+console.log(formatBinary(FLAG_READ|FLAG_WRITE));
+
+console.log("---------------");
+
+let p = FLAG_READ | FLAG_WRITE;
+console.log(formatBinary(p));
+
+let hasWrite = p & FLAG_WRITE ? "yes" : "no";
+console.log(`書き込みパーミッション:${hasWrite}`);
+
+let hasExecute = p & FLAG_EXECUTE ? "yes" : "no";
+console.log(`実行パーミッション:${hasExecute}`);
+
+console.log(formatBinary(p));
+
+p = p ^ FLAG_WRITE;
+console.log(formatBinary(p));
+
+p = p ^ FLAG_WRITE;
+console.log(formatBinary(p));
+
+const hasReadAndWrite = p & (FLAG_READ) ? "可" : "不可";
+console.log(`読み書き${hasReadAndWrite}`);
+
+//5_11
+console.log("--------5_11-------");
+
+console.log(typeof undefined);
+console.log(typeof null); //!!!
+console.log(typeof {});
+console.log(typeof true);
+console.log(typeof 1);
+console.log(typeof "");
+console.log(typeof Symbol());//ES2015~
+console.log(typeof function(){});
+
+//5_13
+console.log("--------5_13-------");
+
+let lv, lv0;
+lv = lv0 = 9.8;
+console.log(lv);//9.8
+console.log(lv0);//9.8
+
+const nums = [3, 5, 15, 7, 5];
+let n, i = 0;
+while(i < nums.length,(n = nums[i++]) < 10){
+	console.log(`10より小さい数字を発見:${n}`);
+}
+console.log(`10より大きい数字を発見:${n}`);
+console.log(`未チェックの数字の個数:${nums.length - i}`);
