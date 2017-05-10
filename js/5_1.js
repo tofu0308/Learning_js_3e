@@ -246,3 +246,16 @@ console.log(formatBinary(p));
 
 const hasReadAndWrite = p & (FLAG_READ) ? "可" : "不可";
 console.log(`読み書き${hasReadAndWrite}`);
+
+//5_11
+console.log("--------5_11-------");
+
+console.log(typeof undefined);
+console.log(typeof null); //!!!
+console.log(typeof {});
+console.log(typeof true);
+console.log(typeof 1);
+console.log(typeof "");
+console.log(typeof Symbol());//ES2015~
+console.log(typeof function(){});
+
