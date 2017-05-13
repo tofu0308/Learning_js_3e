@@ -96,12 +96,31 @@ f3_3(o3_3);
 console.log(`f3_3呼び出し後：o3_3.message = ${o3_3.message}`);
 
 
+//6_3_1
 console.log("---------------");
 
-//6_3_1
 function f3_4(x3_4) {
 	return `f3_4内の値:${x3_4}`
 }
 
 console.log(f3_4());
+
+
+//6_3_2
+console.log("---------------");
+
+function getSentense({subject, verb, object}) {
+	return `${subject} ${verb} ${object}`
+}
+
+const o3_5 = {
+	subject : "I",
+	verb : "love",
+	object : "JavaScript",
+};
+
+console.log(getSentense(o3_5));
+
+
+console.log("---------------");
 
