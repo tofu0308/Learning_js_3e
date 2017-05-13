@@ -274,3 +274,16 @@ while(i < nums.length,(n = nums[i++]) < 10){
 }
 console.log(`10より大きい数字を発見:${n}`);
 console.log(`未チェックの数字の個数:${nums.length - i}`);
+
+
+//5_14
+console.log("--------5_14-------");
+
+const obj14 = {b:2, c:3, d:4};
+const {a, b, c} = obj14;
+console.log(a);
+console.log(b);
+console.log(c);
+//console.log(d);//error
+
+
