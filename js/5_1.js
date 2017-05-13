@@ -304,5 +304,13 @@ let[x14, y14] = arr14;
 console.log(x14);
 console.log(y14);
 
+console.log("---------------");
+
+const arr14_2 = [1, 2, 3, 4, 5];
+let  [x14_2, y14_2, ...rest] = arr14_2;
+
+console.log(x14_2);
+console.log(y14_2);
+console.log(rest);//展開演算子
 
 
