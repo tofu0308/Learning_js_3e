@@ -44,5 +44,14 @@ console.log(avg(a, b));
 
 console.log("---------------");
 
+function f3(x) {
+	console.log(`関数f3の中（代入前）：x= ${x} `);
+	x = 5;
+	console.log(`関数f3の中（代入後）：x= ${x} `);
+}
 
+let x = 3;
+console.log(`関数f3を呼び出す前：x= ${x} `);
+f3(x);
+console.log(`関数f3を呼び出した後：x= ${x} `);
 
