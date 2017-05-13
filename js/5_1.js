@@ -286,4 +286,23 @@ console.log(b);
 console.log(c);
 //console.log(d);//error
 
+console.log("---------------");
+
+const obj14_2 = {b14_2:20, c14_2:30, d14_2:40 };
+let a14_2, b14_2, c14_2;
+({a14_2, b14_2, c14_2} = obj14_2);
+
+console.log(a14_2);
+console.log(b14_2);
+console.log(c14_2);
+
+console.log("---------------");
+
+const arr14 = [1, 2, 3];
+let[x14, y14] = arr14;
+
+console.log(x14);
+console.log(y14);
+
+
 
