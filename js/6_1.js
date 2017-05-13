@@ -72,3 +72,27 @@ f3_2(o3_2);
 console.log(`関数f3_2を呼び出した後：o3_2.message = ${o3_2.message}`);
 
 
+console.log("---------------");
+
+
+function f3_3(o3_3){
+	console.log(`f3_3の中（2つの代入の前）:o3_3.message = ${o3_3.message}`);
+	o3_3.message = "関数f3_3内でセット(1)";
+	console.log(`f3_3の中（2つの代入の間）:o3_3.message = ${o3_3.message}`);
+
+	o3_3 = {
+		message : "新しいオブジェクト"
+	}
+
+	console.log(`f3_3の中（2つの代入の後）:o3_3.message = ${o3_3.message}`);
+}
+
+let o3_3 = {
+	message: '初期値'
+}
+
+console.log(`f3_3呼び出し前：o3_3.message = ${o3_3.message}`);
+f3_3(o3_3);
+console.log(`f3_3呼び出し後：o3_3.message = ${o3_3.message}`);
+
+
