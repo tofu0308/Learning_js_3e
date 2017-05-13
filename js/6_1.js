@@ -29,3 +29,20 @@ console.log(arr);
 
 const message2 = arr[1]();
 console.log(message2);
+
+//6_3
+console.log("--------6_3-------");
+
+function avg(a, b) {
+	return (a + b)/2;
+}
+
+console.log(avg(5,10));
+
+const a = 10, b = 20;
+console.log(avg(a, b));
+
+console.log("---------------");
+
+
+
