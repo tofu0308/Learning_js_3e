@@ -313,4 +313,12 @@ console.log(x14_2);
 console.log(y14_2);
 console.log(rest);//展開演算子
 
+console.log("---------------");
+
+let a14_3 = 5, b14_3 = 10;
+[a14_3, b14_3] = [b14_3, a14_3];
+
+console.log(a14_3);
+console.log(b14_3);
+
 
