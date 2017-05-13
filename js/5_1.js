@@ -274,3 +274,58 @@ while(i < nums.length,(n = nums[i++]) < 10){
 }
 console.log(`10より大きい数字を発見:${n}`);
 console.log(`未チェックの数字の個数:${nums.length - i}`);
+
+
+//5_14
+console.log("--------5_14-------");
+
+const obj14 = {b:2, c:3, d:4};
+const {a, b, c} = obj14;
+console.log(a);
+console.log(b);
+console.log(c);
+//console.log(d);//error
+
+console.log("---------------");
+
+const obj14_2 = {b14_2:20, c14_2:30, d14_2:40 };
+let a14_2, b14_2, c14_2;
+({a14_2, b14_2, c14_2} = obj14_2);
+
+console.log(a14_2);
+console.log(b14_2);
+console.log(c14_2);
+
+console.log("---------------");
+
+const arr14 = [1, 2, 3];
+let[x14, y14] = arr14;
+
+console.log(x14);
+console.log(y14);
+
+console.log("---------------");
+
+const arr14_2 = [1, 2, 3, 4, 5];
+let  [x14_2, y14_2, ...rest] = arr14_2;
+
+console.log(x14_2);
+console.log(y14_2);
+console.log(rest);//展開演算子
+
+console.log("---------------");
+
+let a14_3 = 5, b14_3 = 10;
+[a14_3, b14_3] = [b14_3, a14_3];
+
+console.log(a14_3);
+console.log(b14_3);
+
+//5_16
+console.log("--------5_16-------");
+
+const roomTempC = 26.5;
+let currentTempC = 34.5;
+
+console.log(`室温と気温の差：${currentTempC - roomTempC}℃`);
+console.log(`現在の温度(華氏)：${currentTempC * 9/5 + 32}℉`);
