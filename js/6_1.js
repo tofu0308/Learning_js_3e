@@ -142,3 +142,17 @@ function addPrefix(prefix, ...words){
 
 console.log(addPrefix("con", "verse", "vex"));
 console.log(addPrefix("非", "プログラマー", "デザイナー", "コーダー"));
+
+//6_3_3
+console.log("---------------");
+//デフォルト引数
+
+function f3_7(a, b = "default", c = 3){
+	return `${a} - ${b} - ${c}`;
+}
+
+console.log(f3_7(5, 6, 7));
+console.log(f3_7(5, 6));
+console.log(f3_7(5));
+console.log(f3_7());
+
