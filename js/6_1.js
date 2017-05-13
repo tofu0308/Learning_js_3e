@@ -52,6 +52,23 @@ function f3(x) {
 
 let x = 3;
 console.log(`関数f3を呼び出す前：x= ${x} `);
-f3(x);
+f3(x);o
 console.log(`関数f3を呼び出した後：x= ${x} `);
+
+console.log("---------------");
+
+function f3_2(o3_2){
+	console.log(`関数f3_2の中、o3_2.messageに代入する前の値:${o3_2.message}`);
+	o3_2.message = "messageの値を関数内で設定した。";
+	console.log(`関数f3_2の中、o.messageに代入した後の値:${o3_2.message}`);
+
+}
+
+let o3_2 = {
+	message : "messageの初期値"
+}
+console.log(`関数f3_2を呼び出す前：o3_2.message = ${o3_2.message}`);
+f3_2(o3_2);
+console.log(`関数f3_2を呼び出した後：o3_2.message = ${o3_2.message}`);
+
 
