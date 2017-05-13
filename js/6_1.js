@@ -110,7 +110,7 @@ console.log(f3_4());
 console.log("---------------");
 
 function getSentense({subject, verb, object}) {
-	return `${subject} ${verb} ${object}`
+	return `${subject} ${verb} ${object}`;
 }
 
 const o3_5 = {
@@ -121,6 +121,24 @@ const o3_5 = {
 
 console.log(getSentense(o3_5));
 
+console.log("---------------");
+
+function getSentense3_6([subject, verb, object]) {
+	return `${subject} ${verb} ${object}`;
+}
+
+const arr3_6 = ["主語", "動詞", "目的語"];
+console.log(getSentense3_6(arr3_6));
 
 console.log("---------------");
 
+function addPrefix(prefix, ...words){
+	const prefixedWords = [];
+	for (let i=0; i<words.length; i++) {
+		prefixedWords[i] = prefix + words[i];
+	}
+	return prefixedWords;
+}
+
+console.log(addPrefix("con", "verse", "vex"));
+console.log(addPrefix("非", "プログラマー", "デザイナー", "コーダー"));
