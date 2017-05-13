@@ -321,4 +321,11 @@ let a14_3 = 5, b14_3 = 10;
 console.log(a14_3);
 console.log(b14_3);
 
+//5_16
+console.log("--------5_16-------");
 
+const roomTempC = 26.5;
+let currentTempC = 34.5;
+
+console.log(`室温と気温の差：${currentTempC - roomTempC}℃`);
+console.log(`現在の温度(華氏)：${currentTempC * 9/5 + 32}℉`);
