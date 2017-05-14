@@ -173,3 +173,21 @@ console.log(o4);
 console.log(o4_p2);
 console.log(o4.bark);
 console.log(o4_p2.吠える);
+
+//6_4_1
+console.log("---------------");
+
+const o4_1 = {
+	name: "Wallace",
+	bark() { return 'Woof';}
+}
+
+const o4_1_p2 = {
+	名前: "ポチ",
+	吠える() { return 'わん';}
+}
+
+console.log(o4_1);
+console.log(o4_1_p2);
+console.log(o4_1.bark);
+console.log(o4_1_p2.吠える);
