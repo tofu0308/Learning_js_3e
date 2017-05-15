@@ -191,3 +191,25 @@ console.log(o4_1);
 console.log(o4_1_p2);
 console.log(o4_1.bark);
 console.log(o4_1_p2.吠える);
+
+//6_5
+console.log("--------6_5-------");
+
+const o5_1 = {
+	name :'Wallace',
+	speak() {
+		return `My name is ${this.name}`;
+	}
+}
+
+const o5_1_p2 = {
+	名前: "ポチ",
+	話す() {
+		return `私の名前は${this.名前}です。`;
+	}
+}
+
+console.log(o5_1);
+console.log(o5_1_p2);
+console.log(o5_1.speak);
+console.log(o5_1_p2.話す);
