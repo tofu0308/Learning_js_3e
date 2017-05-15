@@ -213,3 +213,12 @@ console.log(o5_1);
 console.log(o5_1_p2);
 console.log(o5_1.speak);
 console.log(o5_1_p2.話す);
+
+
+const speak = o5_1.speak;
+
+console.log(speak === o5_1.speak);//true
+console.log(speak());//undefind
+console.log(o5_1.speak());
+
+
