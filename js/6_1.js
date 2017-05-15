@@ -222,3 +222,21 @@ console.log(speak());//undefind
 console.log(o5_1.speak());
 
 
+console.log("---------------");
+
+const o5_2 = {
+	name : 'Julie',
+	greetBackwards: function(){
+		const self = this;
+
+		function getReverseName(){
+			let nameBackWards = '';
+			for(let i=self.name.length-1; i>=0; i--){
+				nameBackWards += self.name[i];
+			}
+			return nameBackWards;
+		}
+		return `${getReverseName()} si naem ym , olleH`;
+	},
+};
+console.log(o5_2.greetBackwards());
