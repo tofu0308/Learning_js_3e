@@ -258,4 +258,24 @@ const g6_1 = function f6_1(stop){
 g6_1(false);
 g6_1(true);
 
+//6_7
+console.log("--------6_7-------");
 
+
+const o7_1 = {
+	name : 'Julie',
+	greetBackwards: function(){
+		const getReverseName = () => {
+			console.log(this);
+			console.log(this.name);
+
+			let nameBackWards = '';
+			for(let i=this.name.length-1; i>=0; i--){
+				nameBackWards += this.name[i];
+			}
+			return nameBackWards;
+		}
+		return `${getReverseName()} si naem ym , olleH`;
+	},
+};
+console.log(o7_1.greetBackwards());
