@@ -240,3 +240,22 @@ const o5_2 = {
 	},
 };
 console.log(o5_2.greetBackwards());
+
+
+//6_6
+console.log("--------6_6-------");
+
+const g6_1 = function f6_1(stop){
+	if(stop){
+		console.log("停止");
+		return;
+	} else {
+		console.log("未停止");
+		f6_1(true);
+	}
+};
+
+g6_1(false);
+g6_1(true);
+
+
