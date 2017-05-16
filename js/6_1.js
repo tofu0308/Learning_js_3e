@@ -240,3 +240,42 @@ const o5_2 = {
 	},
 };
 console.log(o5_2.greetBackwards());
+
+
+//6_6
+console.log("--------6_6-------");
+
+const g6_1 = function f6_1(stop){
+	if(stop){
+		console.log("停止");
+		return;
+	} else {
+		console.log("未停止");
+		f6_1(true);
+	}
+};
+
+g6_1(false);
+g6_1(true);
+
+//6_7
+console.log("--------6_7-------");
+
+
+const o7_1 = {
+	name : 'Julie',
+	greetBackwards: function(){
+		const getReverseName = () => {
+			console.log(this);
+			console.log(this.name);
+
+			let nameBackWards = '';
+			for(let i=this.name.length-1; i>=0; i--){
+				nameBackWards += this.name[i];
+			}
+			return nameBackWards;
+		}
+		return `${getReverseName()} si naem ym , olleH`;
+	},
+};
+console.log(o7_1.greetBackwards());
