@@ -319,9 +319,12 @@ console.log(madeline);
 
 console.log("---------------");
 
+'use strict';
+const arr8_4 = [2, 3, -5, 15, 7];
+console.log(Math.min.apply(null, arr8_4));
+console.log(Math.max.apply(null, arr8_4));
 
-
-
+console.log("---------------");
 
 
 
