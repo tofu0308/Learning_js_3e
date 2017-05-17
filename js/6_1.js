@@ -293,3 +293,35 @@ function greet(){
 console.log(greet());
 console.log(greet.call(bruce));
 console.log(greet.call(madeline));
+
+console.log("---------------");
+
+function update(birthYear, occupation) {
+	this.生年 = birthYear;
+	this.職業 = occupation;
+}
+
+console.log(bruce);
+update.call(bruce, 1949, '歌手');
+console.log(bruce);
+
+console.log(madeline);
+update.call(madeline, 1942, '女優');
+console.log(madeline);
+
+console.log("---------------");
+
+update.apply(bruce, [1955, "俳優"]);
+console.log(bruce);
+
+update.apply(madeline, [1918, "ライター"]);
+console.log(madeline);
+
+console.log("---------------");
+
+
+
+
+
+
+
