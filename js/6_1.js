@@ -279,3 +279,83 @@ const o7_1 = {
 	},
 };
 console.log(o7_1.greetBackwards());
+
+//6_8
+console.log("--------6_8-------");	'use strict';
+
+const bruce = {名前: "ブルース"};
+const madeline = {名前: "マデライン"};
+
+function greet(){
+	return `私は${this.名前}です`;
+}
+
+console.log(greet());
+console.log(greet.call(bruce));
+console.log(greet.call(madeline));
+
+console.log("---------------");
+
+function update(birthYear, occupation) {
+	this.生年 = birthYear;
+	this.職業 = occupation;
+}
+
+console.log(bruce);
+update.call(bruce, 1949, '歌手');
+console.log(bruce);
+
+console.log(madeline);
+update.call(madeline, 1942, '女優');
+console.log(madeline);
+
+console.log("---------------");
+
+update.apply(bruce, [1955, "俳優"]);
+console.log(bruce);
+
+update.apply(madeline, [1918, "ライター"]);
+console.log(madeline);
+
+console.log("---------------");
+
+'use strict';
+const arr8_4 = [2, 3, -5, 15, 7];
+console.log(Math.min.apply(null, arr8_4));
+console.log(Math.max.apply(null, arr8_4));
+
+console.log("---------------");
+
+const bruce2 = {名前: "ブルース"};
+
+const newBruce = [1940, '格闘家'];
+update.call(bruce2, ...newBruce);
+console.log(bruce2);
+
+const arr8_5 = [2, 3, -5, 15, 7];
+console.log(Math.min(...arr8_5));
+console.log(Math.max(...arr8_5));
+
+console.log("---------------");
+
+const bruce3 = {名前: "ブルーthree"};
+const madeline3 = {名前: "マデライン3"};
+
+console.log(bruce3);
+const updateBruce = update.bind(bruce3);
+updateBruce(1904, "俳優");
+console.log(bruce3);
+
+console.log(madeline3);
+updateBruce.call(madeline3, 1274, "王様");
+console.log(madeline3);
+console.log(bruce3);
+
+console.log("---------------");
+
+const bruce4 = {名前: "ブルース4"};
+const updateBruce1949 = update.bind(bruce4, 1949);
+
+console.log(bruce4);
+updateBruce1949("作詞家");
+console.log(bruce4);
