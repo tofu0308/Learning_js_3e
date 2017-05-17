@@ -353,4 +353,9 @@ console.log(bruce3);
 
 console.log("---------------");
 
+const bruce4 = {名前: "ブルース4"};
+const updateBruce1949 = update.bind(bruce4, 1949);
 
+console.log(bruce4);
+updateBruce1949("作詞家");
+console.log(bruce4);
