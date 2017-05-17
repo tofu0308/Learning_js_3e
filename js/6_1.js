@@ -326,5 +326,13 @@ console.log(Math.max.apply(null, arr8_4));
 
 console.log("---------------");
 
+const bruce2 = {名前: "ブルース"};
 
+const newBruce = [1940, '格闘家'];
+update.call(bruce2, ...newBruce);
+console.log(bruce2);
+
+const arr8_5 = [2, 3, -5, 15, 7];
+console.log(Math.min(...arr8_5));
+console.log(Math.max(...arr8_5));
 
