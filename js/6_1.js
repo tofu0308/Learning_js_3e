@@ -336,3 +336,21 @@ const arr8_5 = [2, 3, -5, 15, 7];
 console.log(Math.min(...arr8_5));
 console.log(Math.max(...arr8_5));
 
+console.log("---------------");
+
+const bruce3 = {名前: "ブルーthree"};
+const madeline3 = {名前: "マデライン3"};
+
+console.log(bruce3);
+const updateBruce = update.bind(bruce3);
+updateBruce(1904, "俳優");
+console.log(bruce3);
+
+console.log(madeline3);
+updateBruce.call(madeline3, 1274, "王様");
+console.log(madeline3);
+console.log(bruce3);
+
+console.log("---------------");
+
+
