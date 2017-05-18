@@ -51,4 +51,38 @@ function getBirthYear(){
 greet();
 console.log(getBirthYear());
 
+console.log("---------------");
 
+let user = {
+	name3_2: "桃太郎",
+	age3_2: 25,
+}
+
+function greet3_2() {
+	console.log(`こんにちは${user.name3_2}さん`);
+}
+
+function getBirthYear3_2() {
+	return new Date().getFullYear() - user.age3_2;
+}
+
+greet3_2();
+console.log(getBirthYear3_2());
+
+console.log("---------------");
+
+let user3_3 = {
+	name3_3 : "桃太郎",
+	age3_3 : 250,
+}	
+
+function greet3_3(person) {
+	console.log(`こんちわ、${person.name3_3}氏`);
+}
+
+function getBirthYear3_3(person) {
+	return new Date().getFullYear() - person.age3_3;
+}
+
+greet3_3(user3_3);
+console.log(getBirthYear3_3(user3_3));
