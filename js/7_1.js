@@ -32,3 +32,23 @@ function f2_2_1(){
 
 f2_2_1();
 const y2 =3;
+
+//7_3
+console.log("--------7_3-------");
+
+let name = "桃太郎"; //global
+let age = 25; //global
+
+function greet(){
+	console.log(`Hello, ${name}!`);
+}
+
+function getBirthYear(){
+	//今年から年齢を引く
+	return new Date().getFullYear() - age;
+}
+
+greet();
+console.log(getBirthYear());
+
+
