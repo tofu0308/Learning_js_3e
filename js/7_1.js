@@ -73,7 +73,7 @@ console.log("---------------");
 
 let user3_3 = {
 	name3_3 : "桃太郎",
-	age3_3 : 250,
+	age3_3 : 250	,
 }	
 
 function greet3_3(person) {
@@ -86,3 +86,16 @@ function getBirthYear3_3(person) {
 
 greet3_3(user3_3);
 console.log(getBirthYear3_3(user3_3));
+
+
+//7_4
+console.log("--------7_4-------");
+
+console.log("ブロックの前");
+{
+	console.log("ブロック内");
+	const x =300;
+	console.log(x);
+}
+console.log("ブロックの後");
+//console.log(`ブロックの外：${x}`);//error
