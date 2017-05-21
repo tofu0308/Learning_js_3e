@@ -119,5 +119,19 @@ console.log(typeof x5);//スコープ外のため、undefined
 console.log(typeof x5);//スコープ外のため、undefined
 
 
+console.log("---------------");
 
+{
+	//外block
+	let x5_2 = "五の二";
+	console.log(x5_2);
 
+	{
+		//内block
+		let x5_2 = 52;
+		console.log(x5_2);
+	}
+
+	console.log(x5_2);
+}
+console.log(typeof x5_2);
