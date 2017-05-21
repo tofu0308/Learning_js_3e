@@ -226,3 +226,16 @@ let x8_2 = 3;
 
 console.log("---------------");
 
+console.log(x8_3);
+var x8_3 = 83;
+console.log(x8_3);
+
+console.log("---------------");
+
+var x8_4;
+console.log(x8_4);
+x8_4 = 84;
+console.log(x8_4);
+
+console.log("---------------");
+
