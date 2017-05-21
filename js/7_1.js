@@ -207,3 +207,22 @@ const f7_2 = (function(){
  console.log(f7_2());
  console.log(f7_2());
  console.log(f7_2());
+
+//7_8
+console.log("--------7_8-------");
+
+let var8_1;
+let var8_1_2 = undefined;
+console.log(var8_1);
+console.log(var8_1_2);
+//console.log(undef); //error
+
+console.log("---------------");
+
+/*
+x8_2; //error
+let x8_2 = 3;
+*/
+
+console.log("---------------");
+
