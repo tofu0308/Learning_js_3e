@@ -261,3 +261,25 @@ let f9_3 = function() {
 
 console.log(f9_3);
 f9_3();
+
+//7_10
+console.log("--------7_10-------");
+
+if (typeof x10 === "undefined") {
+	console.log("x10は存在しない");
+} else {
+	// x10を参照しても良い
+}
+var x;
+
+
+/*
+以下はerror
+if (typeof x10_2 === "undefined") {
+	console.log("x10_2は存在しない");
+} else {
+	// x10_2を参照できない
+}
+let x10_2;
+*/
+
