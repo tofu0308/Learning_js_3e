@@ -283,3 +283,11 @@ if (typeof x10_2 === "undefined") {
 let x10_2;
 */
 
+//7_11
+console.log("--------7_11-------");
+
+(function(){
+	'use strict';
+
+	/* strict mode */
+})();
