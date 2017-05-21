@@ -186,3 +186,11 @@ oRef.note = "全く安全ではない";
 console.log(oRef);
 
 
+//7_7
+console.log("--------7_7-------");
+
+const message = (function() {
+	const secret = "秘密です";
+	return `秘密の長さは${secret.length}文字です`;
+})();
+console.log(message);
