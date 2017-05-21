@@ -156,3 +156,16 @@ console.log("---------------");
 	console.log(z);
 }
 
+
+//7_6
+console.log("--------7_6-------");
+
+let globalFunc;
+
+{
+	let blockVar = 'a';
+	globalFunc = function() {
+		console.log(blockVar);
+	}
+}
+globalFunc();
