@@ -169,3 +169,20 @@ let globalFunc;
 	}
 }
 globalFunc();
+
+console.log("---------------");
+
+let f6_2;
+
+{
+	let o6_2 = {note: "安全", note2: "大丈夫"};
+	f = function() {
+		console.log("無名関数の中:" + o6_2.note);
+		return o6_2;
+	}
+}
+let oRef = f();
+oRef.note = "全く安全ではない";
+console.log(oRef);
+
+
