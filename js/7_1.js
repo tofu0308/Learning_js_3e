@@ -194,3 +194,16 @@ const message = (function() {
 	return `秘密の長さは${secret.length}文字です`;
 })();
 console.log(message);
+
+console.log("---------------");
+
+const f7_2 = (function(){
+ let count = 0;
+ return function() {
+ 	return `この関数が呼ばれた回数：${++count}回`;
+ } 
+})();
+
+ console.log(f7_2());
+ console.log(f7_2());
+ console.log(f7_2());
