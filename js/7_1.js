@@ -118,7 +118,6 @@ console.log(typeof x5);//スコープ外のため、undefined
 }
 console.log(typeof x5);//スコープ外のため、undefined
 
-
 console.log("---------------");
 
 {
@@ -135,3 +134,25 @@ console.log("---------------");
 	console.log(x5_2);
 }
 console.log(typeof x5_2);
+
+console.log("---------------");
+
+{
+	//外block
+	let x = {color: "青"};
+	let y = x;
+	let z =3;
+
+	{
+		//内側Block
+		let x =5;
+		console.log(x);
+		console.log(y.color);
+		y.color = "赤";
+	}
+
+	console.log(x.color);
+	console.log(y.color);
+	console.log(z);
+}
+
