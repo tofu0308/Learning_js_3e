@@ -99,3 +99,195 @@ console.log("ブロックの前");
 }
 console.log("ブロックの後");
 //console.log(`ブロックの外：${x}`);//error
+
+
+//7_5
+console.log("--------7_5-------");
+
+{
+	//block1
+	const x5 = "ブロック1";
+	console.log(x5);
+}
+console.log(typeof x5);//スコープ外のため、undefined
+
+{
+	//block2
+	const x5 = 3;
+	console.log(x5);
+}
+console.log(typeof x5);//スコープ外のため、undefined
+
+console.log("---------------");
+
+{
+	//外block
+	let x5_2 = "五の二";
+	console.log(x5_2);
+
+	{
+		//内block
+		let x5_2 = 52;
+		console.log(x5_2);
+	}
+
+	console.log(x5_2);
+}
+console.log(typeof x5_2);
+
+console.log("---------------");
+
+{
+	//外block
+	let x = {color: "青"};
+	let y = x;
+	let z =3;
+
+	{
+		//内側Block
+		let x =5;
+		console.log(x);
+		console.log(y.color);
+		y.color = "赤";
+	}
+
+	console.log(x.color);
+	console.log(y.color);
+	console.log(z);
+}
+
+
+//7_6
+console.log("--------7_6-------");
+
+let globalFunc;
+
+{
+	let blockVar = 'a';
+	globalFunc = function() {
+		console.log(blockVar);
+	}
+}
+globalFunc();
+
+console.log("---------------");
+
+let f6_2;
+
+{
+	let o6_2 = {note: "安全", note2: "大丈夫"};
+	f = function() {
+		console.log("無名関数の中:" + o6_2.note);
+		return o6_2;
+	}
+}
+let oRef = f();
+oRef.note = "全く安全ではない";
+console.log(oRef);
+
+
+//7_7
+console.log("--------7_7-------");
+
+const message = (function() {
+	const secret = "秘密です";
+	return `秘密の長さは${secret.length}文字です`;
+})();
+console.log(message);
+
+console.log("---------------");
+
+const f7_2 = (function(){
+ let count = 0;
+ return function() {
+ 	return `この関数が呼ばれた回数：${++count}回`;
+ } 
+})();
+
+ console.log(f7_2());
+ console.log(f7_2());
+ console.log(f7_2());
+
+//7_8
+console.log("--------7_8-------");
+
+let var8_1;
+let var8_1_2 = undefined;
+console.log(var8_1);
+console.log(var8_1_2);
+//console.log(undef); //error
+
+console.log("---------------");
+
+/*
+x8_2; //error
+let x8_2 = 3;
+*/
+
+console.log("---------------");
+
+console.log(x8_3);
+var x8_3 = 83;
+console.log(x8_3);
+
+console.log("---------------");
+
+var x8_4;
+console.log(x8_4);
+x8_4 = 84;
+console.log(x8_4);
+
+//7_9
+console.log("--------7_9-------");
+
+f9();
+function f9() {
+	console.log('関数f9');
+}
+
+console.log("---------------");
+
+/*
+f9_2();//error
+
+let f9_2 = function() {
+	console.log('関数f9_2');
+}
+*/
+
+let f9_3 = function() {
+	console.log('関数f9_3');
+}
+
+console.log(f9_3);
+f9_3();
+
+//7_10
+console.log("--------7_10-------");
+
+if (typeof x10 === "undefined") {
+	console.log("x10は存在しない");
+} else {
+	// x10を参照しても良い
+}
+var x;
+
+
+/*
+以下はerror
+if (typeof x10_2 === "undefined") {
+	console.log("x10_2は存在しない");
+} else {
+	// x10_2を参照できない
+}
+let x10_2;
+*/
+
+//7_11
+console.log("--------7_11-------");
+
+(function(){
+	'use strict';
+
+	/* strict mode */
+})();
