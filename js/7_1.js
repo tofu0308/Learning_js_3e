@@ -237,5 +237,27 @@ console.log(x8_4);
 x8_4 = 84;
 console.log(x8_4);
 
+//7_9
+console.log("--------7_9-------");
+
+f9();
+function f9() {
+	console.log('関数f9');
+}
+
 console.log("---------------");
 
+/*
+f9_2();//error
+
+let f9_2 = function() {
+	console.log('関数f9_2');
+}
+*/
+
+let f9_3 = function() {
+	console.log('関数f9_3');
+}
+
+console.log(f9_3);
+f9_3();
