@@ -99,3 +99,25 @@ console.log("ブロックの前");
 }
 console.log("ブロックの後");
 //console.log(`ブロックの外：${x}`);//error
+
+
+//7_5
+console.log("--------7_5-------");
+
+{
+	//block1
+	const x5 = "ブロック1";
+	console.log(x5);
+}
+console.log(typeof x5);//スコープ外のため、undefined
+
+{
+	//block2
+	const x5 = 3;
+	console.log(x5);
+}
+console.log(typeof x5);//スコープ外のため、undefined
+
+
+
+
