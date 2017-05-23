@@ -53,8 +53,87 @@ console.log(arr7[1]);
 const arr8 = new Array("2");
 console.log(arr8);
 
+//8_2
+console.log("--------8_2-------");
+
+//8_2_1
+let arr2_1 = ["b", "c", "d"];
+console.log(arr2_1.push("e"));
+console.log(arr2_1);
+console.log(arr2_1.pop());
+console.log(arr2_1.unshift("a"));
+console.log(arr2_1);
+console.log(arr2_1.shift());
+console.log(arr2_1);
+
+console.log("---------------");
+
+//8_2_2
+let arr2_2 = [1, 2, 3];
+let arr2_2_2 = arr2_2.concat(4, 5, 6);
+
+console.log(arr2_2);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat(4, 5, 6);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat([4, 5], 6);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat([4, 5], [6, 7]);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat([4, [5, 6]]);
+console.log(arr2_2_2);
+
+console.log("---------------");
+
+//8_2_3
+let arr2_3 = [11, 12, 13, 14, 15];
+let arr2_3_2 = arr2_3.slice(3);//[3]から後ろ
+console.log(arr2_3_2);
+console.log(arr2_3);
+
+arr2_3_2 = arr2_3.slice(2, 4);//[2]~[4]の一つ前まで
+console.log(arr2_3_2);
+
+arr2_3_2 = arr2_3.slice(1, -2);//[1]~最後から二番めの一つ前まで
+console.log(arr2_3_2);
+
+arr2_3_2 = arr2_3.slice(-2, -1);//最後から２番めの一つ前~最後から１番目のひとつ前まで
+console.log(arr2_3_2);
 
 
+console.log("---------------");
 
+//8_2_4
+let arr2_4 = [1, 5, 7];
+let arr2_4_2 = arr2_4.splice(1, 0, 2, 3, 4);//[1]~2, 3, 4 が追加される
+console.log(arr2_4);
+console.log(arr2_4_2);
 
+arr2_4_2 = arr2_4.splice(5, 0, 6);
+console.log(arr2_4);
+console.log(arr2_4_2);
 
+arr2_4_2 = arr2_4.splice(1, 2);
+console.log(arr2_4);
+console.log(arr2_4_2);
+
+arr2_4_2 = arr2_4.splice(2, 1, "a", "b");
+console.log(arr2_4);
+console.log(arr2_4_2);
+
+console.log("---------------");
+
+//8_2_5
+
+let arr2_5 = [11, 12, 13, 14];
+let arr2_5_2 = arr2_5.copyWithin(1, 2);
+
+console.log(arr2_5);
+console.log(arr2_5_2);
+console.log(arr2_5.copyWithin(2, 0, 2));
+console.log(arr2_5.copyWithin(0, -3, -1));
+console.log(arr2_5_2);
