@@ -104,3 +104,22 @@ console.log(arr2_3_2);
 arr2_3_2 = arr2_3.slice(-2, -1);//最後から２番めの一つ前~最後から１番目のひとつ前まで
 console.log(arr2_3_2);
 
+
+console.log("---------------");
+
+let arr2_4 = [1, 5, 7];
+let arr2_4_2 = arr2_4.splice(1, 0, 2, 3, 4);//[1]~2, 3, 4 が追加される
+console.log(arr2_4);
+console.log(arr2_4_2);
+
+arr2_4_2 = arr2_4.splice(5, 0, 6);
+console.log(arr2_4);
+console.log(arr2_4_2);
+
+arr2_4_2 = arr2_4.splice(1, 2);
+console.log(arr2_4);
+console.log(arr2_4_2);
+
+arr2_4_2 = arr2_4.splice(2, 1, "a", "b");
+console.log(arr2_4);
+console.log(arr2_4_2);
