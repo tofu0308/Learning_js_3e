@@ -65,3 +65,24 @@ console.log(arr2_1.unshift("a"));
 console.log(arr2_1);
 console.log(arr2_1.shift());
 console.log(arr2_1);
+
+console.log("---------------");
+
+//8_2_2
+let arr2_2 = [1, 2, 3];
+let arr2_2_2 = arr2_2.concat(4, 5, 6);
+
+console.log(arr2_2);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat(4, 5, 6);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat([4, 5], 6);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat([4, 5], [6, 7]);
+console.log(arr2_2_2);
+
+arr2_2_2 = arr2_2.concat([4, [5, 6]]);
+console.log(arr2_2_2);
