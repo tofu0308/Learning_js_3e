@@ -107,6 +107,7 @@ console.log(arr2_3_2);
 
 console.log("---------------");
 
+//8_2_4
 let arr2_4 = [1, 5, 7];
 let arr2_4_2 = arr2_4.splice(1, 0, 2, 3, 4);//[1]~2, 3, 4 が追加される
 console.log(arr2_4);
@@ -123,3 +124,16 @@ console.log(arr2_4_2);
 arr2_4_2 = arr2_4.splice(2, 1, "a", "b");
 console.log(arr2_4);
 console.log(arr2_4_2);
+
+console.log("---------------");
+
+//8_2_5
+
+let arr2_5 = [11, 12, 13, 14];
+let arr2_5_2 = arr2_5.copyWithin(1, 2);
+
+console.log(arr2_5);
+console.log(arr2_5_2);
+console.log(arr2_5.copyWithin(2, 0, 2));
+console.log(arr2_5.copyWithin(0, -3, -1));
+console.log(arr2_5_2);
