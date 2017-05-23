@@ -53,8 +53,15 @@ console.log(arr7[1]);
 const arr8 = new Array("2");
 console.log(arr8);
 
+//8_2
+console.log("--------8_2-------");
 
-
-
-
-
+//8_2_1
+let arr2_1 = ["b", "c", "d"];
+console.log(arr2_1.push("e"));
+console.log(arr2_1);
+console.log(arr2_1.pop());
+console.log(arr2_1.unshift("a"));
+console.log(arr2_1);
+console.log(arr2_1.shift());
+console.log(arr2_1);
