@@ -86,3 +86,21 @@ console.log(arr2_2_2);
 
 arr2_2_2 = arr2_2.concat([4, [5, 6]]);
 console.log(arr2_2_2);
+
+console.log("---------------");
+
+//8_2_3
+let arr2_3 = [11, 12, 13, 14, 15];
+let arr2_3_2 = arr2_3.slice(3);//[3]から後ろ
+console.log(arr2_3_2);
+console.log(arr2_3);
+
+arr2_3_2 = arr2_3.slice(2, 4);//[2]~[4]の一つ前まで
+console.log(arr2_3_2);
+
+arr2_3_2 = arr2_3.slice(1, -2);//[1]~最後から二番めの一つ前まで
+console.log(arr2_3_2);
+
+arr2_3_2 = arr2_3.slice(-2, -1);//最後から２番めの一つ前~最後から１番目のひとつ前まで
+console.log(arr2_3_2);
+
