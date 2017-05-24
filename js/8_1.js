@@ -154,3 +154,20 @@ console.log(arr2_6.fill("b", 1));
 console.log(arr2_6.fill("c", 2, 4));
 console.log(arr2_6.fill(5.5, -4));
 console.log(arr2_6.fill(0, 3, -1));
+
+console.log("---------------");
+
+//8_2_7
+
+let arr2_7 = [1, 2, 3, 4, 5];
+let arr2_7_2 = arr2_7.reverse();
+
+console.log(arr2_7);
+console.log(arr2_7_2);
+
+arr2_7.reverse();
+
+console.log(arr2_7);
+console.log(arr2_7_2);
+
+console.log("---------------");
