@@ -137,3 +137,65 @@ console.log(arr2_5_2);
 console.log(arr2_5.copyWithin(2, 0, 2));
 console.log(arr2_5.copyWithin(0, -3, -1));
 console.log(arr2_5_2);
+
+
+console.log("---------------");
+
+//8_2_6
+
+let arr2_6 = new Array(5).fill(1);
+console.log(arr2_6);
+
+let arr2_6_2 = arr2_6.fill("a");
+console.log(arr2_6);
+console.log(arr2_6_2);
+
+console.log(arr2_6.fill("b", 1));
+console.log(arr2_6.fill("c", 2, 4));
+console.log(arr2_6.fill(5.5, -4));
+console.log(arr2_6.fill(0, 3, -1));
+
+console.log("---------------");
+
+//8_2_7
+
+let arr2_7 = [1, 2, 3, 4, 5];
+let arr2_7_2 = arr2_7.reverse();
+
+console.log(arr2_7);
+console.log(arr2_7_2);
+
+arr2_7.reverse();
+
+console.log(arr2_7);
+console.log(arr2_7_2);
+
+console.log("---------------");
+
+let arr2_7b = [5, 3, 2, 4, 1];
+let arr2_7b_2 = arr2_7b.sort();
+
+console.log(arr2_7b);
+console.log(arr2_7b_2);
+
+arr2_7b_2.reverse();
+console.log(arr2_7b);
+console.log(arr2_7b_2);
+
+console.log("---------------");
+
+let arr2_7c = [
+	{name: "Suzanne"},
+	{name: "Jim"},
+	{name: "Trever"},
+	{name: "Amanda"},
+
+];
+
+console.log(arr2_7c);
+
+arr2_7c.sort((a, b) => a.name > b.name);
+console.log(arr2_7c);
+
+arr2_7c.sort((a, b) => a.name[1] < b.name[1]);
+console.log(arr2_7c);
