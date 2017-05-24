@@ -171,3 +171,13 @@ console.log(arr2_7);
 console.log(arr2_7_2);
 
 console.log("---------------");
+
+let arr2_7b = [5, 3, 2, 4, 1];
+let arr2_7b_2 = arr2_7b.sort();
+
+console.log(arr2_7b);
+console.log(arr2_7b_2);
+
+arr2_7b_2.reverse();
+console.log(arr2_7b);
+console.log(arr2_7b_2);
