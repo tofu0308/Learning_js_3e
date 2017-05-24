@@ -181,3 +181,21 @@ console.log(arr2_7b_2);
 arr2_7b_2.reverse();
 console.log(arr2_7b);
 console.log(arr2_7b_2);
+
+console.log("---------------");
+
+let arr2_7c = [
+	{name: "Suzanne"},
+	{name: "Jim"},
+	{name: "Trever"},
+	{name: "Amanda"},
+
+];
+
+console.log(arr2_7c);
+
+arr2_7c.sort((a, b) => a.name > b.name);
+console.log(arr2_7c);
+
+arr2_7c.sort((a, b) => a.name[1] < b.name[1]);
+console.log(arr2_7c);
