@@ -199,3 +199,41 @@ console.log(arr2_7c);
 
 arr2_7c.sort((a, b) => a.name[1] < b.name[1]);
 console.log(arr2_7c);
+
+//8_3
+console.log("--------8_3-------");
+
+const o3_1 = {name: "ジェリー"};
+const arr3_1 = [1, 5, "a", o3_1, true, 5, [1, 2], "9"];
+
+console.log(arr3_1.indexOf(5));
+console.log(arr3_1.lastIndexOf(5));
+console.log(arr3_1.indexOf("a"));
+console.log(arr3_1.lastIndexOf("a"));
+
+console.log(arr3_1.indexOf({name: "ジェリー"}));
+console.log(arr3_1.indexOf(o3_1));
+console.log(arr3_1.indexOf([1, 2]));
+console.log(arr3_1.indexOf("9"));
+console.log(arr3_1.indexOf(9));
+
+console.log(arr3_1.indexOf("a", 5));
+console.log(arr3_1.indexOf(5, 5));
+console.log(arr3_1.lastIndexOf(5, 4));
+console.log(arr3_1.lastIndexOf(true, 3));
+
+console.log("---------------");
+
+const arr3_2 = [
+	{id: 5, name: "太郎"},
+	{id: 7, name: "花子"},
+];
+
+console.log(arr3_2.findIndex(o3_2 => o3_2.id === 5 ));
+console.log(arr3_2.findIndex(o3_2 => o3_2.name === "花子" ));
+console.log(arr3_2.findIndex(o3_2 => o3_2 === 3 ));
+console.log(arr3_2.findIndex(o3_2 => o3_2.id === 17 ));
+console.log(arr3_2.findIndex(o3_2 => o3_2.id === 7 ));
+
+console.log("---------------");
+
