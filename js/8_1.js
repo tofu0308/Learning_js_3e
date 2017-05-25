@@ -237,3 +237,12 @@ console.log(arr3_2.findIndex(o3_2 => o3_2.id === 7 ));
 
 console.log("---------------");
 
+
+const arr3_3 = [
+	{id: 5, name: "太郎"},
+	{id: 7, name: "花子"},
+];
+
+console.log(arr3_3.find(o => o.id === 5));
+console.log(arr3_3.find(o => o.id === 2));
+console.log(arr3_3.find(o => o.id === 7));
