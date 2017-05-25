@@ -237,7 +237,6 @@ console.log(arr3_2.findIndex(o3_2 => o3_2.id === 7 ));
 
 console.log("---------------");
 
-
 const arr3_3 = [
 	{id: 5, name: "太郎"},
 	{id: 7, name: "花子"},
@@ -246,3 +245,38 @@ const arr3_3 = [
 console.log(arr3_3.find(o => o.id === 5));
 console.log(arr3_3.find(o => o.id === 2));
 console.log(arr3_3.find(o => o.id === 7));
+
+console.log("---------------");
+
+const arr3_4 = [1, 17, 16, 5, 4, 16, 10, 3, 49];
+console.log(arr3_4.find((x, i) => i > 2 && Number.isInteger(Math.sqrt(x))));
+console.log(arr3_4.find((x, i) => i > 5 && Number.isInteger(Math.sqrt(x))));
+
+console.log("---------------");
+
+class Person {
+	constructor(name) {
+		this.name = name;
+		this.id = Person.nextId ++;
+	}
+}
+
+Person.nextId = 0;
+const 一郎 = new Person("一郎"),
+	二郎 = new Person("二郎"),
+	三郎 = new Person("三郎"),
+	四郎 = new Person("四郎");
+const arr3_5 = [一郎, 二郎, 三郎, 四郎];
+
+//IDを使って直接比較
+console.log(arr3_5.find(p => p.id === 三郎.id));
+
+//thisを利用
+console.log(arr3_5.find(function(p){return p.id === this.id},三郎));
+
+//アロー関数（lexicallyに束縛される：undefind）
+console.log(arr3_5.find(p => p.id === this.id, 三郎));
+
+console.log("---------------");
+
+
