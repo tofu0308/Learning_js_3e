@@ -279,4 +279,12 @@ console.log(arr3_5.find(p => p.id === this.id, 三郎));
 
 console.log("---------------");
 
+const arr3_6 = [5, 7, 12, 15, 17];
+console.log(arr3_6.some(x => x%2 === 0));
+console.log(arr3_6.some(x => Number.isInteger(Math.sqrt(x))));//整数の二乗は存在しない
 
+console.log("---------------");
+
+const arr3_7 = [4, 6, 16, 36];
+console.log(arr3_7.every(x => x%2 === 0));
+console.log(arr3_7.every(x => Number.isInteger(Math.sqrt(x))));//6は二乗は存在しない
