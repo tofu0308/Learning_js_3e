@@ -199,3 +199,176 @@ console.log(arr2_7c);
 
 arr2_7c.sort((a, b) => a.name[1] < b.name[1]);
 console.log(arr2_7c);
+
+//8_3
+console.log("--------8_3-------");
+
+const o3_1 = {name: "ジェリー"};
+const arr3_1 = [1, 5, "a", o3_1, true, 5, [1, 2], "9"];
+
+console.log(arr3_1.indexOf(5));
+console.log(arr3_1.lastIndexOf(5));
+console.log(arr3_1.indexOf("a"));
+console.log(arr3_1.lastIndexOf("a"));
+
+console.log(arr3_1.indexOf({name: "ジェリー"}));
+console.log(arr3_1.indexOf(o3_1));
+console.log(arr3_1.indexOf([1, 2]));
+console.log(arr3_1.indexOf("9"));
+console.log(arr3_1.indexOf(9));
+
+console.log(arr3_1.indexOf("a", 5));
+console.log(arr3_1.indexOf(5, 5));
+console.log(arr3_1.lastIndexOf(5, 4));
+console.log(arr3_1.lastIndexOf(true, 3));
+
+console.log("---------------");
+
+const arr3_2 = [
+	{id: 5, name: "太郎"},
+	{id: 7, name: "花子"},
+];
+
+console.log(arr3_2.findIndex(o3_2 => o3_2.id === 5 ));
+console.log(arr3_2.findIndex(o3_2 => o3_2.name === "花子" ));
+console.log(arr3_2.findIndex(o3_2 => o3_2 === 3 ));
+console.log(arr3_2.findIndex(o3_2 => o3_2.id === 17 ));
+console.log(arr3_2.findIndex(o3_2 => o3_2.id === 7 ));
+
+console.log("---------------");
+
+const arr3_3 = [
+	{id: 5, name: "太郎"},
+	{id: 7, name: "花子"},
+];
+
+console.log(arr3_3.find(o => o.id === 5));
+console.log(arr3_3.find(o => o.id === 2));
+console.log(arr3_3.find(o => o.id === 7));
+
+console.log("---------------");
+
+const arr3_4 = [1, 17, 16, 5, 4, 16, 10, 3, 49];
+console.log(arr3_4.find((x, i) => i > 2 && Number.isInteger(Math.sqrt(x))));
+console.log(arr3_4.find((x, i) => i > 5 && Number.isInteger(Math.sqrt(x))));
+
+console.log("---------------");
+
+class Person {
+	constructor(name) {
+		this.name = name;
+		this.id = Person.nextId ++;
+	}
+}
+
+Person.nextId = 0;
+const 一郎 = new Person("一郎"),
+	二郎 = new Person("二郎"),
+	三郎 = new Person("三郎"),
+	四郎 = new Person("四郎");
+const arr3_5 = [一郎, 二郎, 三郎, 四郎];
+
+//IDを使って直接比較
+console.log(arr3_5.find(p => p.id === 三郎.id));
+
+//thisを利用
+console.log(arr3_5.find(function(p){return p.id === this.id},三郎));
+
+//アロー関数（lexicallyに束縛される：undefind）
+console.log(arr3_5.find(p => p.id === this.id, 三郎));
+
+console.log("---------------");
+
+const arr3_6 = [5, 7, 12, 15, 17];
+console.log(arr3_6.some(x => x%2 === 0));
+console.log(arr3_6.some(x => Number.isInteger(Math.sqrt(x))));//整数の二乗は存在しない
+
+console.log("---------------");
+
+const arr3_7 = [4, 6, 16, 36];
+console.log(arr3_7.every(x => x%2 === 0));
+console.log(arr3_7.every(x => Number.isInteger(Math.sqrt(x))));//6は二乗は存在しない
+
+//8_4
+console.log("--------8_4-------");
+
+const cart = [
+	{名前: "iPhone", 価格: 54800},
+	{名前: "Android", 価格: 44800},
+];
+
+const names = cart.map(x => x.名前);
+console.log(names);
+
+const prices = cart.map(x => x.価格);
+console.log(prices);
+
+const discountPrices = prices.map(x => x*0.8);
+console.log(discountPrices);
+
+const lcNames = names.map(x => x.toLowerCase());
+console.log(lcNames);
+
+console.log("---------------");
+
+const items4_2 = ["iPhone", "Android"];
+const prices4_2 = [54800, 49800];
+const cart4_2 = items4_2.map((x, i) => ({name: x, price: prices4_2[i]}));
+
+console.log(cart4_2);
+
+console.log("---------------");
+
+const カードの束 = [];
+for(let マーク of ['ハート', 'クローバー', 'ダイア', 'スペード']) {
+	for(let 数字=1; 数字<=13; 数字++){
+		カードの束.push({マーク, 数字});
+	}
+}
+
+let 選択されたカード = カードの束.filter(カード => カード.数字 === 2);
+console.log(選択されたカード);
+
+選択されたカード = カードの束.filter(カード => カード.マーク === 'ダイア');
+console.log(選択されたカード);
+
+選択されたカード = カードの束.filter(カード => カード.数字 > 10);
+console.log(選択されたカード);
+
+選択されたカード = カードの束.filter(カード => カード.数字 > 10 && カード.マーク === 'ハート');
+console.log(選択されたカード);
+
+console.log("---------------");
+
+
+function 記号表現に変換する(カード) {
+	const マーク名_絵文字 = {
+		'ハート': '♡',
+		'クローバー': '♧',
+		'ダイア': '♢',
+		'スペード': '♤'
+	};
+
+	const 数字からAJQK = {1: 'A', 11: 'J', 12: 'Q', 13: 'K'};
+	for(let i=2; i<=10; i++) {
+		数字からAJQK[i] = i;
+	}
+	return マーク名_絵文字[カード.マーク] + 数字からAJQK[カード.数字];		
+}
+
+
+
+
+let 選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 === 2).map(記号表現に変換する);
+console.log(選択されたカード_記号表現);
+
+選択されたカード_記号表現 = カードの束.filter(カード => カード.マーク === 'ダイア').map(記号表現に変換する);
+console.log(選択されたカード_記号表現);
+
+選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 > 10).map(記号表現に変換する);
+console.log(選択されたカード_記号表現);
+
+選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 > 10 && カード.マーク === 'ハート').map(記号表現に変換する);
+console.log(選択されたカード_記号表現);
+
+
