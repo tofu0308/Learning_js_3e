@@ -308,3 +308,13 @@ console.log(discountPrices);
 
 const lcNames = names.map(x => x.toLowerCase());
 console.log(lcNames);
+
+console.log("---------------");
+
+const items4_2 = ["iPhone", "Android"];
+const prices4_2 = [54800, 49800];
+const cart4_2 = items4_2.map((x, i) => ({name: x, price: prices4_2[i]}));
+
+console.log(cart4_2);
+
+console.log("---------------");
