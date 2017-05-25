@@ -288,3 +288,23 @@ console.log("---------------");
 const arr3_7 = [4, 6, 16, 36];
 console.log(arr3_7.every(x => x%2 === 0));
 console.log(arr3_7.every(x => Number.isInteger(Math.sqrt(x))));//6は二乗は存在しない
+
+//8_4
+console.log("--------8_4-------");
+
+const cart = [
+	{名前: "iPhone", 価格: 54800},
+	{名前: "Android", 価格: 44800},
+];
+
+const names = cart.map(x => x.名前);
+console.log(names);
+
+const prices = cart.map(x => x.価格);
+console.log(prices);
+
+const discountPrices = prices.map(x => x*0.8);
+console.log(discountPrices);
+
+const lcNames = names.map(x => x.toLowerCase());
+console.log(lcNames);
