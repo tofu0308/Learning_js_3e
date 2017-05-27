@@ -340,7 +340,6 @@ console.log(選択されたカード);
 
 console.log("---------------");
 
-
 function 記号表現に変換する(カード) {
 	const マーク名_絵文字 = {
 		'ハート': '♡',
@@ -356,9 +355,6 @@ function 記号表現に変換する(カード) {
 	return マーク名_絵文字[カード.マーク] + 数字からAJQK[カード.数字];		
 }
 
-
-
-
 let 選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 === 2).map(記号表現に変換する);
 console.log(選択されたカード_記号表現);
 
@@ -370,5 +366,120 @@ console.log(選択されたカード_記号表現);
 
 選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 > 10 && カード.マーク === 'ハート').map(記号表現に変換する);
 console.log(選択されたカード_記号表現);
+
+
+//8_5
+console.log("--------8_5-------");
+
+
+const arr5_1 = [5, 7, 2, 4];
+const sum5_1 = arr5_1.reduce((a, x) => a += x, 0);
+console.log(sum5_1);
+
+const sum5_1_2 = arr5_1.reduce((a, x) => a + x, 0);
+console.log(sum5_1_2);
+
+const sum5_3 = arr5_1.reduce((a, x) => a += x);
+console.log(sum5_3);
+
+const sum5_1_4 = arr5_1.reduce((a, x) => a + x);
+console.log(sum5_1_4);
+
+console.log("---------------");
+
+const woards5_2 = [	"Beachball", "Rodeo", "Angel", "Aardvark", "Xlyophone", "November", "Chocolate", "Papaya", "Uniform", "Joker", "Clover", "Bali"];
+const alphabetical = woards5_2.reduce((a, x) => {
+	if(!a[x[0]]){
+		a[x[0]] = [];
+	}
+
+	a[x[0]].push(x);
+	//console.log(a[x[0]]);
+	return a;}, {});
+
+console.table(alphabetical);
+
+console.log("---------------");
+
+const 単語リスト = ["ビーチボール", "ルービックキューブ", "ブダペスト", "トロッコ", "コンゴ", "ゴースト", "トーラス", "スマート", "トンガ", "ガラパゴス", "ストリート", "トーマス", "ストレッチ", "チベット", "トキ", "キツツキ", "キリン"];
+const 先頭文字で分類したもの = 単語リスト.reduce((a, x) => {
+	if(!a[x[0]]){
+		a[x[0]] = [];
+	}
+
+	a[x[0]].push(x);
+	//console.log(a[x[0]]);
+	return a;}, {});
+
+console.table(先頭文字で分類したもの);
+
+console.log("---------------");
+
+const data = [3.3, 5, 7.2, 12, 4, 6, 10.3];
+const stats = data.reduce((a, x) => {
+	a.N++;
+	let delta = x - a.mean;
+	a.mean += delta/a.N;
+	a.M2 = delta*(x - a.mean);
+	return a;
+}, {N: 0, mean: 0, M2: 0});
+
+if(stats.N > 2) {
+	stats.variance = stats.M2 / (stats.N -1);
+	stats.stdev = Math.sqrt(stats.variance);
+}
+console.log(stats);
+
+console.log("---------------");
+
+const words5_5 = [	"Beachball", "Rodeo", "Angel", "Aardvark", "Xlyophone", "November", "Chocolate", "Papaya", "Uniform", "Joker", "Clover", "Bali"];
+const longWords = words5_5.reduce((a, w) => w.length > 6 ?  a+" "+w : a , "").trim();
+console.log(longWords);
+
+const 単語リスト5_5 = ["ビーチボール", "ルービックキューブ", "ブダペスト", "トロッコ", "コンゴ", "ゴースト", "トーラス", "スマート", "トンガ", "ガラパゴス", "ストリート", "トーマス", "ストレッチ", "チベット", "トキ", "キツツキ", "キリン"];
+const 長い単語 = 単語リスト5_5.reduce((a, w) => w.length >= 5 ?  a+" "+w : a , "").trim();
+console.log(長い単語);
+
+//8_6
+console.log("--------8_6-------");
+
+const arr6_1 = Array(10).map(function(x) {
+	return 5;
+});
+console.log(arr6_1);
+
+console.log("---------------");
+
+const arr6_2 = [1, 2, 3, 4, 5];
+delete arr6_2[2];
+console.log(arr6_2);
+
+const result6_2 = arr6_2.map(x => 0);
+console.log(result6_2);
+console.log(result6_2[2]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
