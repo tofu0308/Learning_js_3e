@@ -440,9 +440,23 @@ const 単語リスト5_5 = ["ビーチボール", "ルービックキューブ",
 const 長い単語 = 単語リスト5_5.reduce((a, w) => w.length >= 5 ?  a+" "+w : a , "").trim();
 console.log(長い単語);
 
+//8_6
+console.log("--------8_6-------");
 
+const arr6_1 = Array(10).map(function(x) {
+	return 5;
+});
+console.log(arr6_1);
 
+console.log("---------------");
 
+const arr6_2 = [1, 2, 3, 4, 5];
+delete arr6_2[2];
+console.log(arr6_2);
+
+const result6_2 = arr6_2.map(x => 0);
+console.log(result6_2);
+console.log(result6_2[2]);
 
 
 
