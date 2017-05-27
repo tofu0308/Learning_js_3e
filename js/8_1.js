@@ -356,9 +356,6 @@ function 記号表現に変換する(カード) {
 	return マーク名_絵文字[カード.マーク] + 数字からAJQK[カード.数字];		
 }
 
-
-
-
 let 選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 === 2).map(記号表現に変換する);
 console.log(選択されたカード_記号表現);
 
@@ -370,5 +367,36 @@ console.log(選択されたカード_記号表現);
 
 選択されたカード_記号表現 = カードの束.filter(カード => カード.数字 > 10 && カード.マーク === 'ハート').map(記号表現に変換する);
 console.log(選択されたカード_記号表現);
+
+
+//8_5
+console.log("--------8_5-------");
+
+
+const arr5_1 = [5, 7, 2, 4];
+const sum5_1 = arr5_1.reduce((a, x) => a += x, 0);
+console.log(sum5_1);
+
+const sum5_1_2 = arr5_1.reduce((a, x) => a + x, 0);
+console.log(sum5_1_2);
+
+const sum5_3 = arr5_1.reduce((a, x) => a += x);
+console.log(sum5_3);
+
+const sum5_1_4 = arr5_1.reduce((a, x) => a + x);
+console.log(sum5_1_4);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
