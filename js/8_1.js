@@ -340,7 +340,6 @@ console.log(選択されたカード);
 
 console.log("---------------");
 
-
 function 記号表現に変換する(カード) {
 	const マーク名_絵文字 = {
 		'ハート': '♡',
@@ -386,12 +385,21 @@ console.log(sum5_3);
 const sum5_1_4 = arr5_1.reduce((a, x) => a + x);
 console.log(sum5_1_4);
 
+console.log("---------------");
 
+const woards5_2 = [	"Beachball", "Rodeo", "Angel", "Aardvark", "Xlyophone", "November", "Chocolate", "Papaya", "Uniform", "Joker", "Clover", "Bali"];
+const alphabetical = woards5_2.reduce((a, x) => {
+	if(!a[x[0]]){
+		a[x[0]] = [];
+	}
 
+	a[x[0]].push(x);
+	console.log(a[x[0]]);
+	return a;}, {});
 
+console.log(alphabetical);
 
-
-
+console.log("---------------");
 
 
 
