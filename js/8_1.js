@@ -394,17 +394,25 @@ const alphabetical = woards5_2.reduce((a, x) => {
 	}
 
 	a[x[0]].push(x);
-	console.log(a[x[0]]);
+	//console.log(a[x[0]]);
 	return a;}, {});
 
-console.log(alphabetical);
+console.table(alphabetical);
 
 console.log("---------------");
 
+const 単語リスト = ["ビーチボール", "ルービックキューブ", "ブダペスト", "トロッコ", "コンゴ", "ゴースト", "トーラス", "スマート", "トンガ", "ガラパゴス", "ストリート", "トーマス", "ストレッチ", "チベット", "トキ", "キツツキ", "キリン"];
+const 先頭文字で分類したもの = 単語リスト.reduce((a, x) => {
+	if(!a[x[0]]){
+		a[x[0]] = [];
+	}
 
+	a[x[0]].push(x);
+	//console.log(a[x[0]]);
+	return a;}, {});
 
+console.table(先頭文字で分類したもの);
 
-
-
+console.log("---------------");
 
 
