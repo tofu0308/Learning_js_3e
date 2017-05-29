@@ -458,12 +458,17 @@ const result6_2 = arr6_2.map(x => 0);
 console.log(result6_2);
 console.log(result6_2[2]);
 
+//8_7
+console.log("--------8_7-------");
 
+const arr7_1 = [1, null, "hello", "world", true, undefined];
+delete arr7_1[3];
 
+let result7_1 = arr7_1.join();
+console.log(result7_1);
 
-
-
-
+result7_1 = arr7_1.join(' -- ');
+console.log(result7_1);
 
 
 
