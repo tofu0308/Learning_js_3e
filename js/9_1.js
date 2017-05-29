@@ -35,3 +35,8 @@ const propArray1_2 = Object.keys(o1_2);
 console.log(propArray1_2);
 console.log("---");
 propArray1_2.forEach(prop => console.log(`${prop}: ${o1_2[prop]}`));
+
+console.log("---------------");
+
+const o1_2_2 = {apple:1, xochitl:2, balloon:3, guitar:4, xylophone:5, };
+Object.keys(o1_2_2).filter(prop => prop.match(/^x/)).forEach(prop => console.log(`${prop}: ${o1_2_2[prop]}`));
