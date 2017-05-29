@@ -26,5 +26,12 @@ console.log(o1_1_3["SYM1_1"]);
 console.log(o1_1_3[SYM1_1]);
 
 console.log("---------------");
+//9_1_2
 
+const SYM1_2 =Symbol();
+const o1_2 = {a:1, b:2, c:3, [SYM1_2]: 4};
+const propArray1_2 = Object.keys(o1_2);
 
+console.log(propArray1_2);
+console.log("---");
+propArray1_2.forEach(prop => console.log(`${prop}: ${o1_2[prop]}`));
