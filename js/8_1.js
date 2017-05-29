@@ -470,7 +470,11 @@ console.log(result7_1);
 result7_1 = arr7_1.join(' -- ');
 console.log(result7_1);
 
+console.log("---------------");
 
+const お供 = ["キジ", "犬", "猿"];
+const html = '<ul><li>' + お供.join('</li><li>') + '</li></ul>';
+console.log(html);
 
 
 
