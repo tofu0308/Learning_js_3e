@@ -11,3 +11,20 @@ for(let prop in o1_1){
 }
 
 console.log("---------------");
+
+const o1_1_2 = {a: 1, b:2, c:3, SYM1_1: 4};
+console.log(o1_1_2.SYM1_1);
+console.log(o1_1_2["SYM1_1"]);
+console.log(o1_1_2[SYM1_1]);
+
+console.log("---------------");
+
+const o1_1_3 = {a:1, b:2, c:3};
+o1_1_3[SYM1_1] = 4;
+console.log(o1_1_3.SYM1_1);
+console.log(o1_1_3["SYM1_1"]);
+console.log(o1_1_3[SYM1_1]);
+
+console.log("---------------");
+
+
