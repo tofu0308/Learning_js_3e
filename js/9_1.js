@@ -279,3 +279,42 @@ console.log("---------------");
 	console.log(Car.areSame(car2, car2));
 }
 
+console.log("---------------");
+//9_2_6
+
+{
+	class Vehicle { //乗り物
+		constructor() {
+			this.passengers = [];	//乗客
+			console.log("Vehicleが生成された");
+		}
+		
+		addPassenger(p) {
+			//乗客を追加
+			this.passengers.push(p);
+		}
+	}
+
+	class Car extends Vehicle { //車はの乗り物のサブクラス
+		constructor() {
+			super(); //スーパークラスのコンストラクタを呼び出す
+			console.log("Carが生成された");
+		}
+		deployAirbags() {
+			//エアバッグを動作させる
+			console.log(`ﾊﾟｰﾝ`);
+		}
+	}
+
+	const v = new Vehicle();
+	v.addPassenger("太郎");
+	v.addPassenger("花子");
+	console.log(v.passengers);
+
+	const c =new Car();
+	c.addPassenger("景子");
+	c.addPassenger("ミドリ");
+	console.log(c.passengers);
+	//v.deployAirbags();//error
+	c.deployAirbags();
+}
