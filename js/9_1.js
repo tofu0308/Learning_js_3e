@@ -241,8 +241,226 @@ console.log("---------------");
 	console.log(car1.userGear);
 
 	//car2.shift('d'); //error
+}
 
+console.log("---------------");
+//9_2_5
+
+{
+	class Car {
+		static getNextVin() {
+			return Car.nextVin++;
+		}
+		constructor(make, model) {
+			this.make = make;
+			this.model = model;
+			this.vin = Car.getNextVin();
+		}
+		static areSimilar(car1, car2) {
+			return car1.make === car2.make && car1.model === car2.model;
+		}
+		static areSame(car1, car2) {
+			return car1.vin === car2.vin;
+		}
+	}
+	Car.nextVin = 0;
+
+	const car1 = new Car("Tesla", "Model S");
+	const car2 = new Car("Mazda", "3i");
+	const car3 = new Car("Mazda", "3i");
+
+	console.log(car1.vin);
+	console.log(car2.vin);
+	console.log(car3.vin);
+
+	console.log(Car.areSimilar(car1, car2));
+	console.log(Car.areSimilar(car2, car3));
+	console.log(Car.areSame(car2, car3));
+	console.log(Car.areSame(car2, car2));
+}
+
+console.log("---------------");
+//9_2_6
+
+{
+	class Vehicle { //乗り物
+		constructor() {
+			this.passengers = [];	//乗客
+			console.log("Vehicleが生成された");
+		}
+		
+		addPassenger(p) {
+			//乗客を追加
+			this.passengers.push(p);
+		}
+	}
+
+	class Car extends Vehicle { //車はの乗り物のサブクラス
+		constructor() {
+			super(); //スーパークラスのコンストラクタを呼び出す
+			console.log("Carが生成された");
+		}
+		deployAirbags() {
+			//エアバッグを動作させる
+			console.log(`ﾊﾟｰﾝ`);
+		}
+	}
+
+	const v = new Vehicle();
+	v.addPassenger("太郎");
+	v.addPassenger("花子");
+	console.log(v.passengers);
+
+	const c =new Car();
+	c.addPassenger("景子");
+	c.addPassenger("ミドリ");
+	console.log(c.passengers);
+	//v.deployAirbags();//error
+	c.deployAirbags();
+
+
+//9_2_7
+	class Motorcycle extends Vehicle {}//オートバイ(Vehicleのサブクラス)
+
+	const c2 = new Car();
+	const m = new Motorcycle();
+	console.log(c instanceof Car);
+	console.log(c instanceof Vehicle);
+	console.log(m instanceof Car);
+	console.log(m instanceof Motorcycle);
+	console.log(m instanceof Vehicle);
+}
+
+console.log("---------------");
+//9_2_8
+
+{
+	class Super {
+		constructor() {
+			this.name = 'Super';
+			this.isSuper = true;
+		}
+	}
+
+	Super.prototype.sneaky = '非推奨！';
+
+	class Sub extends Super {
+		constructor() {
+			super();
+			this.name = 'Sub';
+			this.isSub = true;
+		}
+	}
+
+	const obj = new Sub();
+
+	for(let p in obj) {
+		console.log(`${p}: ${obj[p]}` + (obj.hasOwnProperty(p) ? '' : '(継承)'));
+	}
+}
+
+//9_3
+console.log("--------9_2-------");
+
+{
+	class Car {
+		cnstructor(){}
+	}
+
+	class InsurancePolicy {
+		//保険契約
+	}
+
+	function makeInsurable(o) {
+		o.addInsurancePolicy = function(p) {this.insurancePolicy = p;}
+		o.getInsurancePolicy = function() {return this.insurancePolicy;}
+		o.isInsured = function() {return !!this.insurancePolicy;}
+	}
+
+	/* 下記はエラー
+	makeInsurable(Car);
+	const car1 = new Car;
+	car1.addInsurancePolicy(new InsurancePolicy());
+	*/
+
+	const car1 = new Car();
+	makeInsurable(car1);
+	console.log(car1.isInsured());
+
+	car1.addInsurancePolicy(new InsurancePolicy());
+	console.log(car1.isInsured());
 
 }
 
+console.log("---------------");
 
+{
+	class Car {
+		cnstructor(){}
+	}
+
+	class InsurancePolicy {
+		//保険契約
+	}
+
+	function makeInsurable(o) {
+		o.addInsurancePolicy = function(p) {this.insurancePolicy = p;}
+		o.getInsurancePolicy = function() {return this.insurancePolicy;}
+		o.isInsured = function() {return !!this.insurancePolicy;}
+	}
+
+	makeInsurable(Car.prototype);
+
+
+	const car1 = new Car();
+	console.log(car1.isInsured());
+	car1.addInsurancePolicy(new InsurancePolicy());
+	console.log(car1.isInsured());
+
+	console.log("---");
+	
+	const car2 = new Car();
+	console.log(car2.isInsured());
+	car2.addInsurancePolicy(new InsurancePolicy());
+	console.log(car2.isInsured());
+
+}
+
+console.log("---------------");
+
+{
+	class Car {
+		cnstructor(){}
+	}
+
+	class InsurancePolicy {
+		//保険契約
+	}
+
+	const ADD_POLICY = Symbol();
+	const GET_POLICY = Symbol();
+	const IS_INSURED = Symbol();
+	const _POLICY = Symbol();
+
+
+	function makeInsurable(o) {
+		o[ADD_POLICY] = function(p) {this[_POLICY] = p;}
+		o[GET_POLICY] = function() {return thisthis[_POLICY];}
+		o[IS_INSURED] = function() {return !!this[_POLICY];}
+	}
+
+	makeInsurable(Car.prototype);
+
+
+	const car1 = new Car();
+	console.log(car1[IS_INSURED]());
+	car1[ADD_POLICY](new InsurancePolicy());
+	console.log(car1[IS_INSURED]());
+
+	console.log("---");
+	
+	const car2 = new Car();
+	console.log(car2[IS_INSURED]());
+	car2[ADD_POLICY](new InsurancePolicy());
+	console.log(car2[IS_INSURED]());
+}
