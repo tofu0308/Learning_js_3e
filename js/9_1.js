@@ -317,4 +317,17 @@ console.log("---------------");
 	console.log(c.passengers);
 	//v.deployAirbags();//error
 	c.deployAirbags();
+
+
+//9_2_7
+	class Motorcycle extends Vehicle {}//オートバイ(Vehicleのサブクラス)
+
+	const c2 = new Car();
+	const m = new Motorcycle();
+	console.log(c instanceof Car);
+	console.log(c instanceof Vehicle);
+	console.log(m instanceof Car);
+	console.log(m instanceof Motorcycle);
+	console.log(m instanceof Vehicle);
 }
+
