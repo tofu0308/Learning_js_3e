@@ -57,4 +57,17 @@ console.log("--------10_1-------");
 	for(let [u, r] of userRoles){
 		console.log(`${u.name}:${r}`);
 	}
+
+	console.log("---");
+
+	console.log(userRoles.values());
+	console.log([...userRoles.values()]);
+
+	userRoles.delete(u2);
+	console.log(userRoles.size);
+	console.log([...userRoles.values()]);
+
+	userRoles.clear();
+	console.log(userRoles.size);
+	console.log([...userRoles.values()]);
 }
