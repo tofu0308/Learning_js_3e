@@ -28,4 +28,33 @@ console.log("--------10_1-------");
 	console.log(userRoles.get(u1));
 	console.log(userRoles.size);
 
+	console.log("---");
+
+	for(let u of userRoles.keys()){
+		console.log(u.name);
+	}
+
+	console.log("---");
+
+	for(let r of userRoles.values()){
+		console.log(r);
+	}
+
+	console.log("---");
+
+	for(let ur of userRoles.entries()){
+		console.log(`${ur[0].name}:${ur[1]}`);
+	}
+	
+	console.log("---");
+
+	for(let [u, r] of userRoles.entries()){
+		console.log(`${u.name}:${r}`);
+	}
+
+	console.log("---");
+
+	for(let [u, r] of userRoles){
+		console.log(`${u.name}:${r}`);
+	}
 }
