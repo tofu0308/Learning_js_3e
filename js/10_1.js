@@ -71,3 +71,30 @@ console.log("--------10_1-------");
 	console.log(userRoles.size);
 	console.log([...userRoles.values()]);
 }
+
+//10_2
+console.log("--------10_2-------");
+
+{
+	const secretHolder = (function(){
+		const secrets = new WeakMap();
+		return class {
+			setSecret(secret) {
+				secrets.set(this, secret);
+			}
+			getSecret(){
+				return secrets.get(this);
+			}
+		}
+	})();
+
+	const a = new secretHolder();
+	const b = new secretHolder();
+
+	a.setSecret('秘密A');
+	b.setSecret('秘密B');
+
+	console.log(a.getSecret());
+	console.log(b.getSecret());
+}
+
