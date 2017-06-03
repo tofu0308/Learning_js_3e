@@ -120,6 +120,29 @@ console.log("--------10_3-------");
 	console.log(roles.delete('管理者'));
 }
 
+//10_4
+console.log("--------10_4-------");
+
+{
+	const naughty = new WeakSet();
+
+	const children = [
+		{name: "和洋"},
+		{name: "哲人"},
+	];
+
+	naughty.add(children[1]);
+
+	for(let child of children) {
+		if(naughty.has(child)){
+			console.log(`${child.name}君には石炭をあげる`);
+		}else {
+			console.log(`${child.name}君にはプレゼントをあげる`);
+
+		}
+	}
+}
+
 
 
 
