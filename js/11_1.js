@@ -39,7 +39,6 @@ console.log("--------11_2-------");
 //11_4
 console.log("--------11_4-------");
 
-
 {
 	function a(){
 		console.log(`a:bを呼び出す前`);
@@ -82,3 +81,18 @@ console.log("--------11_4-------");
 	}
 }
 
+//11_5
+console.log("--------11_5-------");
+
+{
+	try {
+		console.log("1行目実行中...");
+		throw new Error("error 1");
+		console.log("throw　が実行されると、この行は実行されない");
+	}catch(err){
+		console.log("エラーが発生した");
+	}finally{
+		console.log("finallyの中のこの行はいつも実行される");
+		console.log("リソースの解放をここで行う");
+	}
+}
