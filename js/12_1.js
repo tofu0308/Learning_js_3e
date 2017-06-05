@@ -16,5 +16,22 @@ console.log("--------12_1-------");
 	for (let aPage of book){
 		console.log(aPage);
 	}
+
+	//book.next();//error
+	/*
+	現在下記のコードはエラーになる
+	valuesメッソドにChrome、FireFoxなどが未対応のため。
+
+	const it = book.values();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	*/
+
 }
 
