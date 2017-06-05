@@ -33,5 +33,27 @@ console.log("--------12_1-------");
 	console.log(it.next());
 	*/
 
+	/*
+	同じくエラー
+
+	const it = book.values();
+	let current = it.next();
+	while(!current.done) {
+		console.log(current.value);
+		current = it.next();
+	}
+	*/
+
+	/*
+	やはりエラー
+
+	const it1 = book.values();
+	const it2 = book.values();
+
+	console.log(it1.next());
+	console.log(it1.next());
+	console.log(it2.next());
+	console.log(it1.next());
+	*/
 }
 
