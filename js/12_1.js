@@ -112,6 +112,49 @@ console.log("---------------");
 	},10*1000)
 }
 
+console.log("---------------");
+
+
+{
+	class Log {
+		constructor() {
+			this.messages = [];
+		}
+		add(message) {
+			const now = Date.now();
+			console.log(`ログ追加: ${message}（${now}）`);
+			this.messages.push({ message, timestamp: now });
+		}
+
+		[Symbol.iterator](){
+			return this.messages[Symbol.iterator]();
+		}
+	}
+
+	
+	const log = new Log();
+	log.add("海の監視初日。勤務開始(B)");
+
+	setTimeout(function(){
+		log.add("クジラを見た(B)");
+	},3*1000);
+
+	setTimeout(function(){
+		log.add("1艘の舟を見た(B)");
+	},7*1000);
+
+	setTimeout(function(){
+		log.add("監視終了(B)");
+	},9*1000);
+
+	setTimeout(function(){
+		console.log(`▶︎本日の業務報告(B)：${new Date()}`);
+		for(let entry of log) {
+			const date = new Date(entry.timestamp);
+			console.log(`${entry.message}(${date})`);
+		}
+	},10*1000)
+}
 
 
 
