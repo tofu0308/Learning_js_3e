@@ -178,3 +178,103 @@ console.log("---------------");
 	console.log(it.next());
 }
 
+console.log("---------------");
+//12_1_3
+
+{
+	class FibonacciSequence {
+		[Symbol.iterator](){
+			let a = 0, b = 1;
+			return {
+				next(){
+					let rval = {value: b, done: false};
+					b += a;
+					a = rval.value;
+					return rval;
+				}
+			}
+		}
+	}
+
+	const fib = new FibonacciSequence();
+	let i = 0;
+	for(let n of fib){
+		console.log(`${i+1}: ${n}`);
+		if(++i > 99) {
+			break;
+		}
+	}
+}
+
+//12_2
+console.log("--------12_2-------");
+
+{
+	function* rainbow(){
+		yield '赤';
+		yield '青';
+		yield '黄';
+		yield '緑';
+		yield '青';
+		yield '水色';
+		yield '紫';
+	}	
+
+	const it = rainbow();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+
+	for(let color of rainbow()){
+		console.log(color);
+	}
+}
+
+console.log("---------------");
+//12_2_1
+
+{
+	function* interrogate(){
+		const name = yield "お名前は?";
+		const color = yield "好きな色は?"
+		return `${name}さんの好きな色は${color}だそうです。`;
+	}
+
+	const it = interrogate();
+	
+	//最初の一回は値を渡さない（渡しても無視されるため）
+	console.log(it.next());
+
+	console.log(it.next('楓'));
+	console.log(it.next('緑'));
+	console.log(it.next());
+
+}
+
+console.log("---------------");
+//12_2_2
+
+{
+	function* abc(){
+		yield 'a';
+		yield 'b';
+		return 'c';
+	}	
+
+	const it = abc();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	
+	console.log("---");
+
+	for(let l of abc()){
+		console.log(l);
+	}
+}
