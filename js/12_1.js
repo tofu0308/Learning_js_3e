@@ -257,37 +257,24 @@ console.log("---------------");
 
 }
 
+console.log("---------------");
+//12_2_2
 
+{
+	function* abc(){
+		yield 'a';
+		yield 'b';
+		return 'c';
+	}	
 
+	const it = abc();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	
+	console.log("---");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	for(let l of abc()){
+		console.log(l);
+	}
+}
