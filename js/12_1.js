@@ -237,7 +237,25 @@ console.log("--------12_2-------");
 }
 
 console.log("---------------");
+//12_2_1
 
+{
+	function* interrogate(){
+		const name = yield "お名前は?";
+		const color = yield "好きな色は?"
+		return `${name}さんの好きな色は${color}だそうです。`;
+	}
+
+	const it = interrogate();
+	
+	//最初の一回は値を渡さない（渡しても無視されるため）
+	console.log(it.next());
+
+	console.log(it.next('楓'));
+	console.log(it.next('緑'));
+	console.log(it.next());
+
+}
 
 
 
