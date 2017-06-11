@@ -53,8 +53,35 @@ console.log("--------13_2-------");
 	console.log(isCurrentYearLeapYear());
 }
 
+//13_3
+console.log("--------13_3-------");
 
+{
+	const colors = ['赤','橙','黄','緑','青','水色','紫'];
+	let colorIndex = -1;
 
+	function getNwxtRainbowColor(){
+		 if(++colorIndex >= colors.length) {
+		 	colorIndex = 0;
+		 } 
+		 return colors[colorIndex];
+	}
+
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+	console.log(getNwxtRainbowColor());
+
+}
 
 
 
