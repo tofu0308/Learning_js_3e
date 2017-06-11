@@ -83,7 +83,24 @@ console.log("--------13_3-------");
 
 }
 
+console.log("---------------");
 
+{
+	function isLeapYear(year) {
+		if (year % 4 !== 0){
+			return false;
+		}else if(year % 100 !== 0){
+			return true;
+		}else if(year % 400 !== 0){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	//現在年が閏年の場合true
+	console.log(isLeapYear(new Date().getFullYear()));
+}
 
 
 
