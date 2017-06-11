@@ -60,26 +60,26 @@ console.log("--------13_3-------");
 	const colors = ['赤','橙','黄','緑','青','水色','紫'];
 	let colorIndex = -1;
 
-	function getNwxtRainbowColor(){
+	function getNextRainbowColor(){
 		 if(++colorIndex >= colors.length) {
 		 	colorIndex = 0;
 		 } 
 		 return colors[colorIndex];
 	}
 
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
-	console.log(getNwxtRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
 
 }
 
@@ -102,7 +102,35 @@ console.log("---------------");
 	console.log(isLeapYear(new Date().getFullYear()));
 }
 
+console.log("---------------");
 
+{
+	const getNextRainbowColor = (function(){
+		const colors = ['赤','橙','黄','緑','青','水色','紫'];
+		let colorIndex = -1;
+		return function(){
+			if(++ colorIndex >= colors.length){
+				colorIndex = 0;
+			}
+			return colors[colorIndex];
+		}
+	})();
+
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+	console.log(getNextRainbowColor());
+
+}
 
 
 
