@@ -132,9 +132,48 @@ console.log("---------------");
 
 }
 
+console.log("---------------");
 
+{
+	setInterval(function(){
+		document.querySelector('.rainbow').style['background-color'] = getNextRainbowColor();
 
+	},500);
 
+	const getNextRainbowColor = (function(){
+		const colors =['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+		let colorIndex = -1;
+		return function(){
+			if(++colorIndex >= colors.length){
+				colorIndex = 0;
+			}
+			return colors[colorIndex];
+		}
+	})();
+}
+
+console.log("---");
+
+{
+	function getRainbowIterator() {
+		const colors =['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+		let colorIndex = -1;
+		return {
+			next(){
+				if(++colorIndex >= colors.length){
+					colorIndex = 0;
+				}
+				console.log("in iterator：" + colors[colorIndex]);
+				return{value: colors[colorIndex], done:false}
+			}
+		};
+	}
+
+	const RainbowIterator = getRainbowIterator();
+	setInterval(function(){
+		document.querySelector('.rainbowIterator').style['background-color'] = RainbowIterator.next().value;
+	},500);
+}
 
 
 
