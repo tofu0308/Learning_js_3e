@@ -163,7 +163,7 @@ console.log("---");
 				if(++colorIndex >= colors.length){
 					colorIndex = 0;
 				}
-				console.log("in iterator：" + colors[colorIndex]);
+				//console.log("in iterator：" + colors[colorIndex]);
 				return{value: colors[colorIndex], done:false}
 			}
 		};
@@ -173,6 +173,19 @@ console.log("---");
 	setInterval(function(){
 		document.querySelector('.rainbowIterator').style['background-color'] = RainbowIterator.next().value;
 	},500);
+}
+
+//13_4
+console.log("--------13_4-------");
+//13_4_1
+
+{
+	const v = function(){};
+	const a = [1, 2, 3];
+
+	console.log(typeof(v));
+	console.log(typeof(a));
+	console.log(v instanceof Object);
 }
 
 
