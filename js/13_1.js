@@ -189,6 +189,28 @@ console.log("--------13_4-------");
 }
 
 
+//13_5
+console.log("--------13_5-------");
+
+{
+	setTimeout(function(){
+		console.log("hello");
+	},1500);
+}
+
+console.log("---");
+
+{
+	//-1を１秒おきに表示
+	var i;
+	for(i=5; i>=0; i--){
+		setTimeout(function(){
+			console.log(i===0 ?  "go!" : i);
+		}, (5 - i) * 1000);
+	}
+}
+
+console.log("---");
 
 
 
