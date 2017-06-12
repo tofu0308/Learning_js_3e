@@ -163,7 +163,7 @@ console.log("---");
 				if(++colorIndex >= colors.length){
 					colorIndex = 0;
 				}
-				console.log("in iterator：" + colors[colorIndex]);
+				//console.log("in iterator：" + colors[colorIndex]);
 				return{value: colors[colorIndex], done:false}
 			}
 		};
@@ -175,13 +175,74 @@ console.log("---");
 	},500);
 }
 
+//13_4
+console.log("--------13_4-------");
+//13_4_1
+
+{
+	const v = function(){};
+	const a = [1, 2, 3];
+
+	console.log(typeof(v));
+	console.log(typeof(a));
+	console.log(v instanceof Object);
+}
 
 
+//13_5
+console.log("--------13_5-------");
 
+{
+	setTimeout(function(){
+		console.log("hello");
+	},1500);
+}
 
+console.log("---");
 
+{
+	//-1を１秒おきに表示
+	var i;
+	for(i=5; i>=0; i--){
+		setTimeout(function(){
+			console.log(i===0 ?  "go!" : i);
+		}, (5 - i) * 1000);
+	}
+}
 
+console.log("---");
 
+{
+	//カウントダウン
+	function loopBody(i){
+		setTimeout(function(){
+			console.log(i === 0 ? "go" : i);
+		} ,(5 - i) * 1000);
+	}
+	var i;
+	for(i=5; i>=0; i--){
+		loopBody(i);
+	}
+}
+
+{
+	var i;
+	for(i=5; i>=0; i--){
+		(function(i){
+			setTimeout(function(){
+				console.log(i === 0 ? "go" : i);
+			},(5 -i) * 1000);
+		})(i);
+	}
+}
+
+{
+	for(let i=5; i>=0; i--){
+		setTimeout(function(){
+			console.log(i === 0 ? "go" : i);
+		}, (5 - i) * 1000);
+	}
+}
 
 
 
