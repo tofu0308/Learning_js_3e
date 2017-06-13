@@ -244,6 +244,55 @@ console.log("---");
 	}
 }
 
+console.log("---");
+
+{
+	//-1を１秒おきに表示
+	let i;
+	for(i=5; i>=0; i--){
+		setTimeout(function(){
+			console.log(i===0 ?  "go!" : i);
+		}, (5 - i) * 1000);
+	}
+}
+
+//13_6
+console.log("--------13_6-------");
+
+
+{
+	function addThreeSquareAddFiveTakeSquareRoot(x){
+		return Math.sqrt(Math.pow(x+3, 2) + 5);
+	}
+
+	/* 1 */
+	const answer1 = (addThreeSquareAddFiveTakeSquareRoot(5) + addThreeSquareAddFiveTakeSquareRoot(2)) / addThreeSquareAddFiveTakeSquareRoot(7);
+	console.log(answer1);
+
+	/* 2 */
+	const f = addThreeSquareAddFiveTakeSquareRoot;
+	const answer2 = (f(5) + f(2)) / f(7);
+	console.log(answer2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
