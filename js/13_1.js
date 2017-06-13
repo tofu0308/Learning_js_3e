@@ -359,38 +359,37 @@ console.log("↓↓↓13_6_3↓↓↓");
 }
 console.log("↑↑↑13_6_3↑↑↑");
 
+//13_7
+console.log("--------13_7-------");
+console.log("↓↓↓13_7↓↓↓");
+{
+	function findNeedle(haystack){
+		if(haystack === 0){
+			return "藁山はなくなった";
+		}
+		if(haystack.shift() === "針") {
+			return "針が見つかった";
+		}
+		console.log(haystack);
+		return findNeedle(haystack);
+	}
 
+	console.log(findNeedle(['藁', '藁', '藁', '藁', '針', '藁', '藁']));
+}
 
+console.log("---------------");
 
+{
+	function fact(n){
+		if(n === 1){
+			return 1
+		}
+		return n * fact(n - 1);
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	console.log(fact(1));
+	console.log(fact(4));
+	console.log(fact(5));
+	console.log(fact(8));
+}
+console.log("↑↑↑13_7↑↑↑");
