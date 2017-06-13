@@ -342,8 +342,22 @@ console.log("↓↓↓13_6_2↓↓↓");
 }
 
 console.log("↑↑↑13_6_2↑↑↑");
+console.log("---------------");
+//13_6_3
 
+console.log("↓↓↓13_6_3↓↓↓");
+{
+	function newSummer(f) {
+		return arr => sum(arr, f);
+	}
 
+	const sumOfSquares = newSummer(x => x*x);
+	const sumOfCubes = newSummer(x => Math.pow(x, 3));
+
+	console.log(sumOfSquares([1, 2, 3]));
+	console.log(sumOfCubes([1, 2, 3]));
+}
+console.log("↑↑↑13_6_3↑↑↑");
 
 
 
