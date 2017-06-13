@@ -277,7 +277,7 @@ console.log("--------13_6-------");
 
 console.log("---------------");
 //13_6_1
-
+console.log("↓↓↓13_6_1↓↓↓");
 {
 	const sin = Math.sin;
 	const cos = Math.cos;
@@ -319,7 +319,29 @@ console.log("---------------");
 		console.log(p2);
 	}
 }
+console.log("↑↑↑13_6_1↑↑↑");
 
+console.log("---------------");
+//13_6_2
+
+console.log("↓↓↓13_6_2↓↓↓");
+
+{
+	function sum(arr, f){
+		if(typeof f != 'function') {
+			f = x => x;
+		}
+
+		return arr.reduce((a, x) => a += f(x), 0);
+	}
+
+	console.log(sum([1, 2, 3]));
+	console.log(sum([1, 2, 3], x => x * x));
+	console.log(sum([1, 2, 3], x => Math.pow(x, 3)));
+
+}
+
+console.log("↑↑↑13_6_2↑↑↑");
 
 
 
