@@ -17,14 +17,23 @@ console.log("--------14_2-------");
 console.log("---");
 
 {
-	console.log("setTimeoutの前(その2)" + new Date());
+	console.log("setTimeoutの前(無名関数)" + new Date());
 	setTimeout(
 		function(){
 			console.log("setTimeoutに指定された無名関数の中" + new Date());
 		},10*1000);
 
-	console.log("setTimeoutの後(その2)");
-	console.log("こちらもsetTimeoutの後(その2)");
+	console.log("setTimeoutの後(無名関数)");
+	console.log("こちらもsetTimeoutの後(無名関数)");
 }
 
 console.log("---");
+
+{
+	console.log("setTimeoutの前(アロー関数)" + new Date());
+	setTimeout(()=> console.log("setTimeoutに指定されたアロー関数の中" + new Date()), 10*1000);
+
+	console.log("setTimeoutの後(アロー関数)");
+	console.log("こちらもsetTimeoutの後(無名アロー関数)");
+
+}
