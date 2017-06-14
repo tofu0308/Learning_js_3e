@@ -54,7 +54,22 @@ console.log("---------------");
 	},1*1000);
 }
 
+console.log("---------------");
+//14_2_2
 
+{
+	//countdown(失敗)
+	function countdown(){
+		let i;
+		console.log("カウントダウン(失敗)");
+
+		for(i=5; i>=0; i--){
+			setTimeout(function(){
+				console.log(i===0 ? "Go!" : i);
+			}, (5-i)*1000);
+		}
+	}
+}
 
 
 
