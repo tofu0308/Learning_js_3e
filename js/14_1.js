@@ -37,3 +37,62 @@ console.log("---");
 	console.log("こちらもsetTimeoutの後(無名アロー関数)");
 
 }
+
+console.log("---------------");
+//14_2_1
+
+{
+	const start = new Date();
+	let i = 0;
+
+	const intervalId = setInterval(function(){
+		let now = new Date();
+		if(now.getMinutes() !== start.getMinutes() || ++i > 10){
+			return clearInterval(intervalId);
+		}
+		console.log(`14_2_1の処理 :${i} : ${now}`)
+	},1*1000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
