@@ -7,6 +7,10 @@ console.log("--------14_3-------");
 			function(onFulfilled, onRejected){
 				for(let i=seconds; i>=0; i--){
 					setTimeout(function(){
+						if(i === 13){
+							return onRejected(new Error("不吉な数字エラー"));
+						}
+
 						if(i>0){
 							console.log(i + '...');
 						}else{
@@ -18,22 +22,22 @@ console.log("--------14_3-------");
 		);
 	}
 	
-	countdown(5).then(
+	countdown(15).then(
 		function(){
 			console.log("カウントダウン成功");
 		},
 		function(err){
-			console.log("カウントダウン失敗" + err.message);
+			console.log("カウントダウン失敗:" + err.message);
 
 		}
 	);
 
-	const p = countdown(5);
+	const p = countdown(15);
 	p.then(function(){
 		console.log("カウントダウン成功(p)");
 	});
 
 	p.catch(function(err){
-		console.log("カウントダウン失敗(p)" + err.message);
+		console.log("カウントダウン失敗(p):" + err.message);
 	});
 }
