@@ -1,6 +1,6 @@
 //14_3
 console.log("--------14_3-------");
-//14_3_1
+//14_3_2
 {
 	function countdown(seconds){
 		return new Promise(
@@ -17,6 +17,14 @@ console.log("--------14_3-------");
 			}
 		);
 	}
-	countdown(5);
-}
+	countdown(5).then(
+		function(){
+			console.log("カウントダウン成功");
+		},
+		function(err){
+			console.log("カウントダウン失敗" + err.message);
 
+		}
+	);
+
+}
