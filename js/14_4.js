@@ -17,6 +17,7 @@ console.log("--------14_3-------");
 			}
 		);
 	}
+	
 	countdown(5).then(
 		function(){
 			console.log("カウントダウン成功");
@@ -27,4 +28,12 @@ console.log("--------14_3-------");
 		}
 	);
 
+	const p = countdown(5);
+	p.then(function(){
+		console.log("カウントダウン成功(p)");
+	});
+
+	p.catch(function(err){
+		console.log("カウントダウン失敗(p)" + err.message);
+	});
 }
