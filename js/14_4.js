@@ -125,7 +125,37 @@ console.log("---------------");
 		});
 }
 
+console.log("---------------");
 
+{
+	'use strict';
+	const fs = require('fs');
+
+	function readFile(fileName){
+		return new Promise(
+			(onFulfilled, onRejected) => {
+				fs.readFile(fileName, "utf-8", (err, data) => {
+					if(err){
+						onRejected(err);
+					}
+					onFulfilled(data);
+				});
+			}
+		)
+	}
+
+	function writeFile(fileName, data){
+		return new Promise(
+			(onFulfilled, onRejected) => {
+				fs.writeFile(fileName, data, err => {
+					if(err){
+						onRejected(err);
+					}
+					onFulfilled("OK");
+				});
+			});
+	}
+}
 
 
 
