@@ -155,6 +155,22 @@ console.log("---------------");
 				});
 			});
 	}
+
+	let allData = "";
+	readFile("../parts/a.txt").then(function(fileData){
+		allData += fileData;
+		return readFile("../parts/b.txt");
+	}).then(function(fileData){
+		allData += fileData;
+		return readFile("../parts/c.txt");
+	}).then(function(fileData){
+		allData += fileData;
+		return readFile("../parts/d.txt", allData);
+	}).then(function(mes){
+		console.log("file結合に成功");
+	}).catch(err => {
+		console.log("error : " + err);
+	});
 }
 
 
