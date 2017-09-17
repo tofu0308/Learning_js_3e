@@ -27,13 +27,35 @@ console.log("--------14_3_6-------");
 
 	function launch(){
 		return new Promise(function(onFulfilled, onRejected){
-			if(Math.random() < 0.5) return;
+			if(Math.random() < 0.5)
+//				return onRejected(new Error("打ち上げ失敗"));
+			return;
 			console.log("発射");
 			setTimeout(function(){
 				onFulfilled("周回軌道に乗った");
 			}, 2*1000);
 
 		});
+	}
+
+	//タイムアウトをアタッチする関数
+	function addTimeout(fn,period){
+		if(period === undefined) period = 1000;
+		return function(...args){
+			return new Promise(function(onFulfilled, onRejected){
+				const timeoutId = setTimeout(onRejected, period,new Error("プロミス タイムアウト"));
+				fn(...args)
+					.then(function(...args){
+						clearTimeout(timeoutId);
+						onFulfilled(...args);
+
+					})
+					.catch((function(...args){
+						clearTimeout(timeoutId);
+						onRejected(...args);
+					});
+			});
+		}
 	}
 
 	countdown(3)
