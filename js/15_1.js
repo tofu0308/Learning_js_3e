@@ -62,6 +62,50 @@ console.log("--------15_2-------");
 	d  = new Date('2020年7月10日');
 	console.log(`文字列を指定 => ${d}`);
 	*/
-
 }
 
+//15_5
+console.log("--------15_5-------");
+{
+	const d = new Date(Date.UTC(2017, 1, 14));
+	console.log(d);
+}
+
+	console.log(`-------`);
+
+{
+	const before = { d: new Date() };
+	console.log(before.d);
+	console.log(before.d instanceof Date);
+
+	const json = JSON.stringify(before);
+	console.log(json);
+
+	const after = JSON.parse(json);
+	console.log(after.d instanceof Date);
+	console.log(typeof after.d);
+
+	console.log(after.d);
+	//json文字列からDあてオブジェクトに復元
+	after.d = new Date(after.d);
+	console.log(after.d instanceof Date);
+	console.log(after.d);
+}
+
+	console.log(`-------`);
+
+{
+	const before = { d: new Date().valueOf() };
+	console.log(before.d);
+	console.log(typeof before.d);
+
+	const json = JSON.stringify(before);
+	console.log(json);
+
+	const after = JSON.parse(json);
+	console.log(after);
+	console.log(typeof after.d);
+
+	const d = new Date(after.d);
+	console.log(d);
+}
