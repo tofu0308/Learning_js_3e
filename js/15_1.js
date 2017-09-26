@@ -62,6 +62,12 @@ console.log("--------15_2-------");
 	d  = new Date('2020年7月10日');
 	console.log(`文字列を指定 => ${d}`);
 	*/
+}
 
+//15_5
+console.log("--------15_5-------");
+{
+	const d = new Date(Date.UTC(2017, 1, 14));
+	console.log(d);
 }
 
