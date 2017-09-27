@@ -121,3 +121,21 @@ console.log("--------15_7-------");
 	console.log(d.toTimeString());
 	console.log(d.toUTCString());
 }
+
+//15_8
+console.log("--------15_8-------");
+
+{
+ const d = new Date(Date.UTC(1815, 9, 10));
+
+ console.log(d.getFullYear());
+ console.log(d.getMonth());　//月（0から始まる）
+ console.log(d.getDate());　//日
+ console.log(d.getDay()); //曜日
+ console.log(d.getHours());
+ console.log(d.getMinutes());
+ console.log(d.getSeconds());
+ console.log(d.getMilliseconds());
+
+
+}
