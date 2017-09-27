@@ -71,7 +71,8 @@ console.log("--------15_5-------");
 	console.log(d);
 }
 
-	console.log(`-------`);
+//15_6
+console.log("--------15_6-------");
 
 {
 	const before = { d: new Date() };
@@ -108,4 +109,87 @@ console.log("--------15_5-------");
 
 	const d = new Date(after.d);
 	console.log(d);
+}
+
+//15_7
+console.log("--------15_7-------");
+
+{
+	const d = new Date(Date.UTC(1930, 4, 10, 10, 0));
+	console.log(d.toLocaleDateString());
+	console.log(d.toLocaleTimeString());
+	console.log(d.toTimeString());
+	console.log(d.toUTCString());
+}
+
+//15_8
+console.log("--------15_8-------");
+
+{
+ const d = new Date(Date.UTC(1815, 9, 10));
+
+ console.log(d.getFullYear());
+ console.log(d.getMonth());　//月（0から始まる）
+ console.log(d.getDate());　//日
+ console.log(d.getDay()); //曜日
+ console.log(d.getHours());
+ console.log(d.getMinutes());
+ console.log(d.getSeconds());
+ console.log(d.getMilliseconds());
+}
+
+//15_9
+console.log("--------15_9-------");
+{
+	const d1 = new Date(1996, 2, 1);
+	const d2 = new Date(2012, 1, 2);
+	console.log(d1 > d2);
+	console.log(d1 < d2);
+}
+
+//15_10
+console.log("--------15_10-------");
+
+{
+	const d1 = new Date(1996, 2, 1);
+	const d2 = new Date(2012, 1, 2);
+
+	const msDiff = d2 - d1;
+	console.log(msDiff);
+
+	const dayDiff = msDiff/(1000*60*60*24);
+	console.log(dayDiff);
+}
+
+console.log(`-------`);
+
+{
+	const dates = [];
+
+	const min = new Date(2017, 0, 1).valueOf();
+	const delta = new Date(2020, 0, 1).valueOf() - min;
+
+	//2017-2020年の間の日時をランダムに抽出して配列に格納
+	for (let i=0; i<10; i++){
+		dates.push(new Date(min + delta*Math.random()));
+	}
+
+	console.log("ランダム");
+	printDates(dates);
+	
+	console.log("降順ソート");
+	dates.sort((a,b) => b - a);
+	printDates(dates);
+
+	console.log("昇順ソート");
+	dates.sort((a,b) => a - b);
+	printDates(dates);
+
+	function printDates(dates){
+		for(let i=0; i<dates.length; i++){
+			const d = dates[i];
+			console.log(i + ". " + d.getFullYear() + "年" + (d.getMonth()+1) + "月" + d.getDate() + "日");
+		}
+	}
+	
 }
