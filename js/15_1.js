@@ -71,7 +71,8 @@ console.log("--------15_5-------");
 	console.log(d);
 }
 
-	console.log(`-------`);
+//15_6
+console.log("--------15_6-------");
 
 {
 	const before = { d: new Date() };
@@ -108,4 +109,15 @@ console.log("--------15_5-------");
 
 	const d = new Date(after.d);
 	console.log(d);
+}
+
+//15_7
+console.log("--------15_7-------");
+
+{
+	const d = new Date(Date.UTC(1930, 4, 10, 10, 0));
+	console.log(d.toLocaleDateString());
+	console.log(d.toLocaleTimeString());
+	console.log(d.toTimeString());
+	console.log(d.toUTCString());
 }
