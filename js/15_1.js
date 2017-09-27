@@ -160,3 +160,36 @@ console.log("--------15_10-------");
 	const dayDiff = msDiff/(1000*60*60*24);
 	console.log(dayDiff);
 }
+
+console.log(`-------`);
+
+{
+	const dates = [];
+
+	const min = new Date(2017, 0, 1).valueOf();
+	const delta = new Date(2020, 0, 1).valueOf() - min;
+
+	//2017-2020年の間の日時をランダムに抽出して配列に格納
+	for (let i=0; i<10; i++){
+		dates.push(new Date(min + delta*Math.random()));
+	}
+
+	console.log("ランダム");
+	printDates(dates);
+	
+	console.log("降順ソート");
+	dates.sort((a,b) => b - a);
+	printDates(dates);
+
+	console.log("昇順ソート");
+	dates.sort((a,b) => a - b);
+	printDates(dates);
+
+	function printDates(dates){
+		for(let i=0; i<dates.length; i++){
+			const d = dates[i];
+			console.log(i + ". " + d.getFullYear() + "年" + (d.getMonth()+1) + "月" + d.getDate() + "日");
+		}
+	}
+	
+}
