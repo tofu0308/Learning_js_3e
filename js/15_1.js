@@ -138,7 +138,6 @@ console.log("--------15_8-------");
  console.log(d.getMilliseconds());
 }
 
-
 //15_9
 console.log("--------15_9-------");
 {
@@ -146,4 +145,18 @@ console.log("--------15_9-------");
 	const d2 = new Date(2012, 1, 2);
 	console.log(d1 > d2);
 	console.log(d1 < d2);
+}
+
+//15_10
+console.log("--------15_10-------");
+
+{
+	const d1 = new Date(1996, 2, 1);
+	const d2 = new Date(2012, 1, 2);
+
+	const msDiff = d2 - d1;
+	console.log(msDiff);
+
+	const dayDiff = msDiff/(1000*60*60*24);
+	console.log(dayDiff);
 }
