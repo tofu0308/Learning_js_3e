@@ -49,3 +49,17 @@ console.log(`-------`);
 	console.log(x.toPrecision(2));
 	console.log(x.toPrecision(1));
 }
+
+console.log(`-------`);
+
+//16_1_4
+{
+	const x = 12;
+
+	console.log(x.toString());
+	console.log(x.toString(10));
+	console.log(x.toString(16));
+	console.log(x.toString(8));
+	console.log(x.toString(2));
+}
+
