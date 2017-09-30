@@ -154,7 +154,20 @@ console.log(`-------`);
 	console.log(Math.max(0.2, 2, -4));
 }
 
+console.log(`-------`);
 
+//16_3_4
+{
+	console.log("random");
+	console.log(Math.random());
+	console.log(10 + (15 - 10) * Math.random());
+	
+	//[m, n)
+	console.log(1  + Math.floor((100 - 1) * Math.random()));
+	
+	//[m, n]
+	console.log(1  + Math.floor((100 - +1) * Math.random()));
+}
 
 
 
