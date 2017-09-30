@@ -121,6 +121,38 @@ console.log(`-------`);
 	console.log(Math.log1p(17.5));
 }
 
+console.log(`-------`);
+
+{
+	console.log(Math.abs(-5.5));
+	console.log(Math.abs(5.5));
+
+	console.log(Math.sign(-10.5));
+	console.log(Math.sign(2314.12));
+
+	console.log(Math.ceil(2.2));
+	console.log(Math.ceil(-3.8));
+
+	console.log(Math.floor(2.8));
+	console.log(Math.floor(-3.2));
+
+	console.log(Math.trunc(7.7));
+	console.log(Math.trunc(-5.8));
+
+	console.log(Math.round(7.2));	
+	console.log(Math.round(7.8));	
+	console.log(Math.round(-7.7));	
+	console.log(Math.round(-7.2));
+
+	console.log(Math.min(1, 2, 3, 4, 2));
+	console.log(Math.min(0.2, 2, 4));
+	console.log(Math.min(0.2, 2, -4));
+
+	console.log(Math.max(1, 2, 3, 4, 2));
+	console.log(Math.max(0.2, 2, 4));
+	console.log(Math.max(0.2, 2, -4));
+}
+
 
 
 
