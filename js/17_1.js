@@ -47,4 +47,16 @@ console.log("--------17_1-------");
 
 	console.log(`-------`);
 
+	//大文字・小文字を区別せずにマッチング
+	console.log(input.toLowerCase().startsWith("as"));
+
+	//replace処理
+	const output = input.replace("going", "walking");
+	console.log(output);
+
+	let output2 = input2.replace("イギリス", "英国");
+	output2 = output2.replace("名前", "名称");
+
+	console.log(output2);
+
 }
