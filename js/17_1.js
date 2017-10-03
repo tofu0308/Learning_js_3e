@@ -58,5 +58,56 @@ console.log("--------17_1-------");
 	output2 = output2.replace("名前", "名称");
 
 	console.log(output2);
+}
+
+//17_3
+console.log("--------17_3-------");
+
+{
+	const input = "As I was going to Saint Ives";
+	const re = /\w{3,}/ig;
+
+	console.log(input.match(re));
+	console.log(input.search(re));
+	console.log(re.test(input));
+
+	console.log(`-------`);
+
+	let a = re.exec(input);
+	console.log(a);
+	console.log(a[0]);
+	console.log(a.index);
+	console.log(a.input);
+	console.log(a[1]);
+
+	console.log(re.exec(input));
+	console.log(re.exec(input));
+	console.log(re.exec(input));
+
+	console.log(`-------`);
+
+	console.log(input.match(/\w{3,}/ig));
+	console.log(input.match(/\w{3,}/i));
+	console.log(input.search(/\w{3,}/ig));
+}
+
+//17_4
+console.log("--------17_4-------");
+
+{
+	const input = "As I was going to Saint Ives";	
+	const output = input.replace(/\w{4,}/ig, "****");
+	console.log(output);
+
+	console.log(`-------`);
+
+	const input2 = "セント・アイヴスはイギリスにある町の名前です。";
+	const output2 = input2.replace(/[はをにで]/g, ' ');
+	console.log(output2);
 
 }
+
+
+
+
+
