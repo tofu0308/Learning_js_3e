@@ -107,6 +107,178 @@ console.log("--------17_4-------");
 
 }
 
+//17_6
+console.log("--------17_6-------");
+{
+	const html = 'HTML with <a href="/one">one link</a>, and some JavaScript.' + '<script src="stuff.js"></script>';
+	const matches = html.match(/area|a|link|script|source/ig);
+	console.log(matches);
+}
+
+console.log(`-------`);
+
+{
+	const html = 'HTML with <a href="/one">one link</a>, and some JavaScript.' + '<script src="stuff.js"></script>';
+	const matches = html.match(/<area|<a|<link|<script|<source/ig);
+	console.log(matches);
+}
+
+
+//17_8
+console.log("--------17_8-------");
+{
+	const beer99 = "99 bottles of beer on the wall " + " take 1 down ans pass it around --" + "98 bottels of beer on the wall.";
+	const m1 = beer99.match(/0|1|2|3|4|5|6|7|8|9/g);
+	console.log(m1);
+
+	const m2 = beer99.match(/[0-9]/g);
+	console.log(m2);
+
+	const m3 = beer99.match(/[0-9a-z\-.]/ig);
+	console.log(m3);
+
+	const m4 = beer99.match(/[-0-9a-z.]/ig);
+	const m5 = beer99.match(/[a-z.0-9-]/ig);
+
+	const m3String = JSON.stringify(m3);
+	const m4String = JSON.stringify(m4);
+	const m5String = JSON.stringify(m5);
+
+	console.log(m3String);
+	console.log(m3String === m4String);
+	console.log(m3String === m5String);
+
+	const match = beer99.match(/[^ 0-9a-z]/g);
+	console.log(match);
+}
+
+	console.log(`-------`);
+
+{
+	const beer99j = "99本のビンが、壁に並んでいます。" + "1本取って渡しました。" + "98本のビンが、壁に並んでいます。";
+	const match2 = beer99j.match(/[^0-9ァ-ヴぁ-ん。、]+/g);
+
+	console.log(match2);
+}
+
+//17_9
+console.log("--------17_9-------");
+
+{
+	const text = '８月３０日ＭＡＺ昨年四月三十日。';
+	let match = text.match(/[０-９]/);
+	console.log(match);
+
+	match = text.match(/[Ａ-Ｚ]/g)
+	console.log(match);
+
+	match = text.match(/[０１２３４５６７８９]/g)
+	console.log(match);
+
+	match = text.match(/[年月日]/g)
+	console.log(match);
+}
+
+	console.log(`-------`);
+
+{
+	const tShirts =
+		'Small:   9\n' +
+		'Medium:  5\n' +
+		'Large:   2\n';
+
+	const numbers = tShirts.match(/:\s*[0-9]/g);
+	console.log(numbers);
+}
+
+{
+	const phoneNumber1 = "(0269)99-9876";
+	const phoneNumber2 = "0269ー99ー9875";
+
+	console.log(phoneNumber1.replace(/\D/g, ''));
+	console.log(phoneNumber2.replace(/\D/g, ''));
+
+	const field1 = '    X      ';
+	const field2 = '　　\t      ';
+
+	console.log(/\S/.test(field1));
+	console.log(/\S/.test(field2));
+}
+
+//17_10
+console.log("--------17_10-------");
+
+{
+	const beer99 = "99 bottles of beer on the wall " + " take 1 down ans pass it around --" + "98 bottels of beer on the wall.";
+	const matches = beer99.match(/[0-9]+/g);
+	console.log(matches);
+}
+
+//17_11
+console.log("--------17_11-------");
+
+{
+	const input = 'Adress: 333 Main St., Anywhere, NY, 55532. Phone: 555-555-2525.';
+	const match = input.match(/.*\d{5}/);
+	console.log(match[0]);
+
+	const equation = "(2 + 3.5) * 7";
+	const match2 = equation.match(/\(\d \+ \d\.\d\) \* \d/);
+	console.log(match2[0]);
+
+	//17_11_1
+	const beer99 = 
+		"99 bottles of beer on the wall " + 
+		" take 1 down ans pass it around --" + 
+		"98 bottels of beer on the wall.";
+
+	const match3 = beer99.match(/[\s\S]*/);
+	console.log(match3[0] === beer99);
+}
+
+//17_12
+console.log("--------17_12-------");
+
+{
+	const text = "Visit oreilly.com today!";
+	const match = text.match(/[a-z0-9]+(?:\.com|\.org|\.edu)/ig);
+	console.log(match);
+}
+
+{
+	const html = 
+		'<link rel="stylesheet" href="http://insure.com/stuff.css">\n' +
+		'<link rel="stylesheet" href="https://secure.com/securestuff.css">\n' +
+		'<link rel="stylesheet" href="//anything.com/flexible.css">';
+
+	const matches = html.match(/(?:https?:)?\/\/[a-z0-9][a-z0-9.-]+[a-z0-9]+/ig);
+	console.log(matches);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
