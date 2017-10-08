@@ -108,6 +108,19 @@ console.log("--------17_4-------");
 }
 
 
+//17_6
+console.log("--------17_6-------");
+{
+	const html = 'HTML with <a href="/one">one link</a>, and some JavaScript.' + '<script src="stuff.js"></script>';
+	const matches = html.match(/area|a|link|script|source/ig);
+	console.log(matches);
+}
 
+console.log(`-------`);
 
+{
+	const html = 'HTML with <a href="/one">one link</a>, and some JavaScript.' + '<script src="stuff.js"></script>';
+	const matches = html.match(/<area|<a|<link|<script|<source/ig);
+	console.log(matches);
+}
 
