@@ -236,6 +236,24 @@ console.log("--------17_11-------");
 	console.log(match3[0] === beer99);
 }
 
+//17_12
+console.log("--------17_12-------");
+
+{
+	const text = "Visit oreilly.com today!";
+	const match = text.match(/[a-z0-9]+(?:\.com|\.org|\.edu)/ig);
+	console.log(match);
+}
+
+{
+	const html = 
+		'<link rel="stylesheet" href="http://insure.com/stuff.css">\n' +
+		'<link rel="stylesheet" href="https://secure.com/securestuff.css">\n' +
+		'<link rel="stylesheet" href="//anything.com/flexible.css">';
+
+	const matches = html.match(/(?:https?:)?\/\/[a-z0-9][a-z0-9.-]+[a-z0-9]+/ig);
+	console.log(matches);
+}
 
 
 
