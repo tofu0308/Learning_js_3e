@@ -137,6 +137,16 @@ console.log("--------17_8-------");
 	const m3 = beer99.match(/[0-9a-z\-.]/ig);
 	console.log(m3);
 
+	const m4 = beer99.match(/[-0-9a-z.]/ig);
+	const m5 = beer99.match(/[a-z.0-9-]/ig);
+
+	const m3String = JSON.stringify(m3);
+	const m4String = JSON.stringify(m4);
+	const m5String = JSON.stringify(m5);
+
+	console.log(m3String);
+	console.log(m3String === m4String);
+	console.log(m3String === m5String);
 
 
 }
