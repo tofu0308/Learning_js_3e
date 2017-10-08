@@ -214,4 +214,54 @@ console.log("--------17_10-------");
 	console.log(matches);
 }
 
+//17_11
+console.log("--------17_11-------");
+
+{
+	const input = 'Adress: 333 Main St., Anywhere, NY, 55532. Phone: 555-555-2525.';
+	const match = input.match(/.*\d{5}/);
+	console.log(match[0]);
+
+	const equation = "(2 + 3.5) * 7";
+	const match2 = equation.match(/\(\d \+ \d\.\d\) \* \d/);
+	console.log(match2[0]);
+
+	//17_11_1
+	const beer99 = 
+		"99 bottles of beer on the wall " + 
+		" take 1 down ans pass it around --" + 
+		"98 bottels of beer on the wall.";
+
+	const match3 = beer99.match(/[\s\S]*/);
+	console.log(match3[0] === beer99);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
