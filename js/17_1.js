@@ -205,5 +205,13 @@ console.log("--------17_9-------");
 	console.log(/\S/.test(field2));
 }
 
+//17_10
+console.log("--------17_10-------");
+
+{
+	const beer99 = "99 bottles of beer on the wall " + " take 1 down ans pass it around --" + "98 bottels of beer on the wall.";
+	const matches = beer99.match(/[0-9]+/g);
+	console.log(matches);
+}
 
 
