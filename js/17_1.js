@@ -148,5 +148,15 @@ console.log("--------17_8-------");
 	console.log(m3String === m4String);
 	console.log(m3String === m5String);
 
+	const match = beer99.match(/[^ 0-9a-z]/g);
+	console.log(match);
+}
 
+	console.log(`-------`);
+
+{
+	const beer99j = "99本のビンが、壁に並んでいます。" + "1本取って渡しました。" + "98本のビンが、壁に並んでいます。";
+	const match2 = beer99j.match(/[^0-9ァ-ヴぁ-ん。、]+/g);
+
+	console.log(match2);
 }
