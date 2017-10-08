@@ -160,3 +160,28 @@ console.log("--------17_8-------");
 
 	console.log(match2);
 }
+
+//17_9
+console.log("--------17_9-------");
+
+{
+	const text = '８月３０日ＭＡＺ昨年四月三十日。';
+	let match = text.match(/[０-９]/);
+	console.log(match);
+
+	match = text.match(/[Ａ-Ｚ]/g)
+	console.log(match);
+
+	match = text.match(/[０１２３４５６７８９]/g)
+	console.log(match);
+
+	match = text.match(/[年月日]/g)
+	console.log(match);
+}
+
+
+
+
+
+
+
