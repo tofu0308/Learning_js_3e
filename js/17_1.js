@@ -295,6 +295,15 @@ console.log("--------17_15-------");
 
 	chapter2 = chapter2.replace(/第(\d+)章/g, '$1章');
 	console.log(chapter2);
+
+	console.log(`-------`);
+
+	let html = '<a class="hoge" href="/www.xxx.yyy" id="zzz">xxxのサイト</a>';
+	html = html.replace(/<a .*?(href=".*?").*?>/, '<a $1>');
+	console.log(html);
+
+
+
 }
 
 
