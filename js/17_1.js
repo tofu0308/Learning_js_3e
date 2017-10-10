@@ -284,6 +284,18 @@ console.log("--------17_14-------");
 	}
 }
 
+//17_15
+console.log("--------17_15-------");
+
+{
+	let chapter2 = 
+		"第2章　あああhogehoge\n" +
+		"第1章ではいいいfugaえええ\n" +
+		"hogefuga第12章ではいよいよaaa\n";
+
+	chapter2 = chapter2.replace(/第(\d+)章/g, '$1章');
+	console.log(chapter2);
+}
 
 
 
