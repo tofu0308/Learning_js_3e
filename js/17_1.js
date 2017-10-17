@@ -255,9 +255,65 @@ console.log("--------17_12-------");
 	console.log(matches);
 }
 
+//17_13
+console.log("--------17_13-------");
 
+{
+	const input = 
+		"Regex pros know the difference between\n" +
+		"<i>greedy</i> and <i>lazy</i> matching.";
 
+		const output = input.replace(/<i>(.*)<\/i>/ig, '<strong>$1</strong>');
+		console.log(output);
 
+		const output2 = input.replace(/<i>(.*?)<\/i>/ig, '<strong>$1</strong>');
+		console.log(output2);
+}
+
+//17_14
+console.log("--------17_14-------");
+
+{
+	const html = 
+		`<img alt='A "simple" example'>` +
+		`<img alt="Don't abuse it!">`;
+	const imageTags = html.match(/<img alt=(['"']).*?\1>/g);
+
+	for(let i=0; imageTags && i<imageTags.length; i++){
+		console.log(imageTags[i]);
+	}
+}
+
+//17_15
+console.log("--------17_15-------");
+
+{
+	let chapter2 = 
+		"第2章　あああhogehoge\n" +
+		"第1章ではいいいfugaえええ\n" +
+		"hogefuga第12章ではいよいよaaa\n";
+
+	chapter2 = chapter2.replace(/第(\d+)章/g, '$1章');
+	console.log(chapter2);
+
+	console.log(`-------`);
+
+	let html = '<a class="hoge" href="/www.xxx.yyy" id="zzz">xxxのサイト</a>';
+	html = html.replace(/<a .*?(href=".*?").*?>/, '<a $1>');
+	console.log(html);
+}
+
+{
+	let html1 = `<a class='abc' href="www.xx.yyy">サイトXX</a>`;
+	let html2 = `<a class='abc' href='www.xx.yyy'>サイトXX</a>`;
+
+	r = html1.replace(/<a .*?(href=(["']).*?\2).*?>/, '<a $1>');
+	console.log(r);
+
+	r = html2.replace(/<a .*?(href=(["']).*?\2).*?>/, '<a $1>');
+	console.log(r);
+
+}
 
 
 
