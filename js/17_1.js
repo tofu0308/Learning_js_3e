@@ -301,11 +301,19 @@ console.log("--------17_15-------");
 	let html = '<a class="hoge" href="/www.xxx.yyy" id="zzz">xxxのサイト</a>';
 	html = html.replace(/<a .*?(href=".*?").*?>/, '<a $1>');
 	console.log(html);
-
-
-
 }
 
+{
+	let html1 = `<a class='abc' href="www.xx.yyy">サイトXX</a>`;
+	let html2 = `<a class='abc' href='www.xx.yyy'>サイトXX</a>`;
+
+	r = html1.replace(/<a .*?(href=(["']).*?\2).*?>/, '<a $1>');
+	console.log(r);
+
+	r = html2.replace(/<a .*?(href=(["']).*?\2).*?>/, '<a $1>');
+	console.log(r);
+
+}
 
 
 
