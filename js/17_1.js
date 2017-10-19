@@ -315,7 +315,13 @@ console.log("--------17_15-------");
 
 }
 
+console.log(`-------`);
 
+{
+	let html = `<a class='abc' id ='s' href="/www.xx.yyy">サイトxx</a>`;
+	r = html.replace(/<a .*?(class=(["']).*\2) .*?(href=(["']).*?\4).*?>/, '<a $3 $1>');
+	console.log(r);
+}
 
 
 
