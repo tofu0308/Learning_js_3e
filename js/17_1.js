@@ -470,25 +470,31 @@ console.log(`-------`);
 	console.log(validPassWord("日本語3Ab"));
 	console.log(validPassWord("Pocke3"));
 	console.log(validPassWord("Pocké3"));	
-
 }
 
+//17_20
+console.log("--------17_20-------");
 
+{
+	const users = ["mary", "nick", "arthur", "sam", "yvette"];
+	const userRegex = new RegExp(`@(?:${users.join('|')})\\b`, 'g');
+	console.log(userRegex);
 
+	const text = 
+		"User @arthur started the backup and 15:15, " +
+		"and @nick and @yvette restored it at 18:35.";
 
+	console.log(text.match(userRegex));
 
+	console.log(`-------`);
 
+	const users2 = ["浦島太郎", "一寸法師", "桃太郎", "金太郎", "かぐや姫"];
+	const userRegex2 = new RegExp(`(?:${users2.join('|')})`, 'g');
+	console.log(userRegex2);
 
+	const text2 = 
+		"浦島太郎がバックアップを開始(15:15)\n" +
+		"かぐや姫と金太郎がリストア(18:35)\n"
 
-
-
-
-
-
-
-
-
-
-
-
-
+	console.log(text2.match(userRegex2));
+}
