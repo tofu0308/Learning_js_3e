@@ -441,8 +441,37 @@ console.log("--------17_18-------");
 	console.log(r);
 }
 
+//17_19
+console.log("--------17_19-------");
 
+{
+	function validPassWord(p) {
+		return /[A-Z]/.test(p) && /[0-9]/.test(p) && /[a-z]/.test(p) && !/[^a-zA-Z0-9]/.test(p);
+	}
 
+	console.log(validPassWord("aiueo"));
+	console.log(validPassWord("3aiuEo"));
+	console.log(validPassWord("traveLer2"));
+	console.log(validPassWord("日本語3Ab"));
+	console.log(validPassWord("Pocke3"));
+	console.log(validPassWord("Pocké3"));	
+}
+
+console.log(`-------`);
+
+{
+	function validPassWord(p){
+		return /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])^[a-zA-Z0-9]+$/.test(p);
+	}
+
+	console.log(validPassWord("aiueo"));
+	console.log(validPassWord("3aiuEo"));
+	console.log(validPassWord("traveLer2"));
+	console.log(validPassWord("日本語3Ab"));
+	console.log(validPassWord("Pocke3"));
+	console.log(validPassWord("Pocké3"));	
+
+}
 
 
 
