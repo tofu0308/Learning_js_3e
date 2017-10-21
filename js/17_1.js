@@ -375,7 +375,7 @@ console.log("--------17_16-------");
 	console.log(r2);
 }
 
-//17_16
+//17_17
 console.log("--------17_17-------");
 
 {
@@ -424,6 +424,22 @@ console.log(`-------`);
 	console.log(beginning2);
 }
 
+//17_18
+console.log("--------17_18-------");
+
+{
+	const inputs = [
+		"john@doe.com",
+		"john@doe.com is my email.",
+		"my email is john@doe.com",
+		"use john@doe.com, my email",
+		"my email:john@doe.com",
+	];
+
+	const emailMatcher = /\b[a-z][a-z0-9._-]*@[a-z][a-z0-9_-]+\.[a-z]+(?:\.[a-z]+)?\b/ig;
+	const r = inputs.map(s => s.replace(emailMatcher, '<a href="mailto:$&">$&</a>'));
+	console.log(r);
+}
 
 
 
