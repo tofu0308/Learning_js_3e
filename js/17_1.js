@@ -337,6 +337,29 @@ console.log(`-------`);
 	console.log(r);
 }
 
+//17_16
+console.log("--------17_16-------");
+
+{
+
+	const html = 
+		`○○<a onclick="alert(!!!)" class="cl1" href="/foo" id="id1">XXX</a>△△`;
+	console.log(sanitizedAtag(html));
+
+	function sanitizedAtag(aTag) {
+		const parts = aTag.match(/<a\s+(.*?)>(.*?)<\/a>/i);
+		//console.log(`parts[1]=${parts[1]}`);
+		//console.log(`parts[1]=${parts[2]}`);
+
+		const attributes = parts[1].split(/\s+/);
+		return '<a ' +  attributes.filter(attr => /^(?:class|id|href)[\s=]/i.test(attr)).join(' ') + '>' + parts[2] + '</a>';
+	}
+}
+
+
+
+
+
 
 
 
