@@ -337,23 +337,164 @@ console.log(`-------`);
 	console.log(r);
 }
 
+//17_16
+console.log("--------17_16-------");
 
+{
 
+	const html = 
+		`○○<a onclick="alert(!!!)" class="cl1" href="/foo" id="id1">XXX</a>△△`;
+	console.log(sanitizedAtag(html));
 
+	function sanitizedAtag(aTag) {
+		const parts = aTag.match(/<a\s+(.*?)>(.*?)<\/a>/i);
+		//console.log(`parts[1]=${parts[1]}`);
+		//console.log(`parts[1]=${parts[2]}`);
 
+		const attributes = parts[1].split(/\s+/);
+		return '<a ' +  attributes.filter(attr => /^(?:class|id|href)[\s=]/i.test(attr)).join(' ') + '>' + parts[2] + '</a>';
+	}
 
+	html.replace(/<a .*?>(.*?)<\/a>/ig, function(match, group1, offset, origin){
+		console.log(`<a>タグが${offset+1}文字目から見つかった`);
+		console.log(`リンク対象文字列は「${group1}」`);
+		console.log(`元々の文字列は「${origin}」`);
+		console.log(`マッチしたのは「${match}」`);
+	});
 
+	console.log(`-------`);
 
+	const r = html.replace(/<a .*?>.*?<\/a>/ig, function(m){
+		return sanitizedAtag(m);
+	});
+	console.log(r);
 
+	console.log(`-------`);
 
+	const r2 = html.replace(/<a .*?<\/a>/ig, sanitizedAtag);
+	console.log(r2);
+}
 
+//17_17
+console.log("--------17_17-------");
 
+{
+	const input = "It was the best of times, it was the worst of times";
+	const beginning = input.match(/^\w+/);
+	console.log(beginning);
+	console.log(beginning[0]);
 
+	const end = input.match(/\w+$/);
+	console.log(end);
+	console.log(end[0]);
 
+	const everything = input.match(/^.*$/);
+	console.log(everything);
+	console.log(everything[0]);
 
+	const nomatch1 = input.match(/^best/i);
+	console.log(nomatch1);
 
+	const nomatch2 = input.match(/worst$/i);
+	console.log(nomatch2);
 
+	console.log(`-------`);
 
+	const input2 = "あの頃が最高だったな〜。まあ、あの頃は最悪でもあったな〜。";
+	const beginning2 = input2.match(/^.*?[はが]/);
+	console.log(beginning2);
+	console.log(beginning2[0]);
 
+	const end2 = input2.match(/[^。]+。$/);
+	console.log(end2[0]);	
+}
 
+console.log(`-------`);
 
+{
+	const input = "One line\nTwo lines\nThree lines\nFour";
+	const beginnings = input.match(/^\w+/mg);
+	console.log(beginnings);
+
+	const endings = input.match(/\w+$/mg);
+	console.log(endings);
+
+	const input2 = "あの頃が最高だったな〜。\nあの頃は最悪でもあったな〜。\nあいつは元気かな〜。"
+	const beginning2 = input2.match(/^.*?[はが]/mg);
+	console.log(beginning2);
+}
+
+//17_18
+console.log("--------17_18-------");
+
+{
+	const inputs = [
+		"john@doe.com",
+		"john@doe.com is my email.",
+		"my email is john@doe.com",
+		"use john@doe.com, my email",
+		"my email:john@doe.com",
+	];
+
+	const emailMatcher = /\b[a-z][a-z0-9._-]*@[a-z][a-z0-9_-]+\.[a-z]+(?:\.[a-z]+)?\b/ig;
+	const r = inputs.map(s => s.replace(emailMatcher, '<a href="mailto:$&">$&</a>'));
+	console.log(r);
+}
+
+//17_19
+console.log("--------17_19-------");
+
+{
+	function validPassWord(p) {
+		return /[A-Z]/.test(p) && /[0-9]/.test(p) && /[a-z]/.test(p) && !/[^a-zA-Z0-9]/.test(p);
+	}
+
+	console.log(validPassWord("aiueo"));
+	console.log(validPassWord("3aiuEo"));
+	console.log(validPassWord("traveLer2"));
+	console.log(validPassWord("日本語3Ab"));
+	console.log(validPassWord("Pocke3"));
+	console.log(validPassWord("Pocké3"));	
+}
+
+console.log(`-------`);
+
+{
+	function validPassWord(p){
+		return /(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])^[a-zA-Z0-9]+$/.test(p);
+	}
+
+	console.log(validPassWord("aiueo"));
+	console.log(validPassWord("3aiuEo"));
+	console.log(validPassWord("traveLer2"));
+	console.log(validPassWord("日本語3Ab"));
+	console.log(validPassWord("Pocke3"));
+	console.log(validPassWord("Pocké3"));	
+}
+
+//17_20
+console.log("--------17_20-------");
+
+{
+	const users = ["mary", "nick", "arthur", "sam", "yvette"];
+	const userRegex = new RegExp(`@(?:${users.join('|')})\\b`, 'g');
+	console.log(userRegex);
+
+	const text = 
+		"User @arthur started the backup and 15:15, " +
+		"and @nick and @yvette restored it at 18:35.";
+
+	console.log(text.match(userRegex));
+
+	console.log(`-------`);
+
+	const users2 = ["浦島太郎", "一寸法師", "桃太郎", "金太郎", "かぐや姫"];
+	const userRegex2 = new RegExp(`(?:${users2.join('|')})`, 'g');
+	console.log(userRegex2);
+
+	const text2 = 
+		"浦島太郎がバックアップを開始(15:15)\n" +
+		"かぐや姫と金太郎がリストア(18:35)\n"
+
+	console.log(text2.match(userRegex2));
+}
