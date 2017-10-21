@@ -362,6 +362,17 @@ console.log("--------17_16-------");
 		console.log(`マッチしたのは「${match}」`);
 	});
 
+	console.log(`-------`);
+
+	const r = html.replace(/<a .*?>.*?<\/a>/ig, function(m){
+		return sanitizedAtag(m);
+	});
+	console.log(r);
+
+	console.log(`-------`);
+
+	const r2 = html.replace(/<a .*?<\/a>/ig, sanitizedAtag);
+	console.log(r2);
 }
 
 
