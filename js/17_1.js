@@ -375,6 +375,54 @@ console.log("--------17_16-------");
 	console.log(r2);
 }
 
+//17_16
+console.log("--------17_17-------");
+
+{
+	const input = "It was the best of times, it was the worst of times";
+	const beginning = input.match(/^\w+/);
+	console.log(beginning);
+	console.log(beginning[0]);
+
+	const end = input.match(/\w+$/);
+	console.log(end);
+	console.log(end[0]);
+
+	const everything = input.match(/^.*$/);
+	console.log(everything);
+	console.log(everything[0]);
+
+	const nomatch1 = input.match(/^best/i);
+	console.log(nomatch1);
+
+	const nomatch2 = input.match(/worst$/i);
+	console.log(nomatch2);
+
+	console.log(`-------`);
+
+	const input2 = "あの頃が最高だったな〜。まあ、あの頃は最悪でもあったな〜。";
+	const beginning2 = input2.match(/^.*?[はが]/);
+	console.log(beginning2);
+	console.log(beginning2[0]);
+
+	const end2 = input2.match(/[^。]+。$/);
+	console.log(end2[0]);	
+}
+
+console.log(`-------`);
+
+{
+	const input = "One line\nTwo lines\nThree lines\nFour";
+	const beginnings = input.match(/^\w+/mg);
+	console.log(beginnings);
+
+	const endings = input.match(/\w+$/mg);
+	console.log(endings);
+
+	const input2 = "あの頃が最高だったな〜。\nあの頃は最悪でもあったな〜。\nあいつは元気かな〜。"
+	const beginning2 = input2.match(/^.*?[はが]/mg);
+	console.log(beginning2);
+}
 
 
 
