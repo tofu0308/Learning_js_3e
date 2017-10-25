@@ -32,5 +32,21 @@ console.log("--------");
 			printDOM(node.childNodes[i], prefix + ' ');
 		}
 	}
-	printDOM(document, '');
+	printDOM(document, '');	
 }
+
+//18_3
+console.log("--------18_3-------");
+
+{
+	const id = document.getElementById('content');
+	console.log(id);
+
+	const callouts = document.getElementsByClassName('callout');
+	console.log(callouts);
+
+	const paragraphs = document.getElementsByTagName('p');
+	console.log(paragraphs);
+}
+
+
