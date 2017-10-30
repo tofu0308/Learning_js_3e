@@ -77,23 +77,19 @@ console.log("--------18_5-------");
 	console.log(para1.innerHTML);
 }
 
+//18_6
+console.log("--------18_6-------");
 
+{
+	const p1 = document.createElement('p');
+	const p2 = document.createElement('p');
 
+	p1.textContent = "この段落は動的に生成された。(18_6 p1)"
+	p2.textContent = "この段落は動的に生成されたその2。(18_6 p2)"
 
+	const parent = document.getElementById('content');
+	const firstchild = parent.childNodes[0];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	parent.insertBefore(p1, firstchild);
+	parent.appendChild(p2);
+}
