@@ -49,4 +49,34 @@ console.log("--------18_3-------");
 	console.log(paragraphs);
 }
 
+//18_4
+console.log("--------18_4-------");
+
+{
+	console.log(document.querySelectorAll('.callout'));
+	console.log(document.querySelectorAll('#content p'));
+	console.log(document.querySelectorAll('#content > p'));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
