@@ -49,4 +49,47 @@ console.log("--------18_3-------");
 	console.log(paragraphs);
 }
 
+//18_4
+console.log("--------18_4-------");
 
+{
+	console.log(document.querySelectorAll('.callout'));
+	console.log(document.querySelectorAll('#content p'));
+	console.log(document.querySelectorAll('#content > p'));
+}
+
+//18_5
+console.log("--------18_5-------");
+
+{
+	const para1 = document.getElementsByTagName('p')[0];
+	console.log(para1.textContent);
+	console.log(para1.innerHTML);
+
+	console.log("変更します");
+
+	para1.innerHTML = "HTMLを修正しました";
+	console.log(para1.innerHTML);
+
+	console.log("変更します");
+
+	para1.innerHTML = "innerHTML を使った後の<b>修正後</b>HTML"
+	console.log(para1.innerHTML);
+}
+
+//18_6
+console.log("--------18_6-------");
+
+{
+	const p1 = document.createElement('p');
+	const p2 = document.createElement('p');
+
+	p1.textContent = "この段落は動的に生成された。(18_6 p1)"
+	p2.textContent = "この段落は動的に生成されたその2。(18_6 p2)"
+
+	const parent = document.getElementById('content');
+	const firstchild = parent.childNodes[0];
+
+	parent.insertBefore(p1, firstchild);
+	parent.appendChild(p2);
+}
