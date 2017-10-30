@@ -58,7 +58,24 @@ console.log("--------18_4-------");
 	console.log(document.querySelectorAll('#content > p'));
 }
 
+//18_5
+console.log("--------18_5-------");
 
+{
+	const para1 = document.getElementsByTagName('p')[0];
+	console.log(para1.textContent);
+	console.log(para1.innerHTML);
+
+	console.log("変更します");
+
+	para1.innerHTML = "HTMLを修正しました";
+	console.log(para1.innerHTML);
+
+	console.log("変更します");
+
+	para1.innerHTML = "innerHTML を使った後の<b>修正後</b>HTML"
+	console.log(para1.innerHTML);
+}
 
 
 
