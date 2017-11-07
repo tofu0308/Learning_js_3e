@@ -114,6 +114,18 @@ console.log("--------18_7-------");
 	higloghtParts('ユニーク');
 }
 
+{
+	function removeParaHighlights(){
+		const paras = document.getElementsByTagName('p');
+		//const paras = document.querySelectorAll('p.highligt18_7');
+		for(let p of paras) {
+			p.classList.remove('highligt18_7');
+		}
+	}
+	//削除用
+	//removeParaHighlights();
+
+}
 
 
 
