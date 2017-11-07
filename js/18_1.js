@@ -93,3 +93,53 @@ console.log("--------18_6-------");
 	parent.insertBefore(p1, firstchild);
 	parent.appendChild(p2);
 }
+
+//18_7
+console.log("--------18_7-------");
+
+{
+	function higloghtParts(containing) {
+		if(typeof containing === 'string') {
+			containing = new RegExp(`${containing}`);
+		}
+
+		const paras = document.getElementsByTagName('p');
+
+		for(let p of paras) {
+			if(!containing.test(p.textContent)) continue;
+			p.classList.add('highligt18_7');
+		}
+	}	
+}
+
+{
+	function removeParaHighlights(){
+		const paras = document.getElementsByTagName('p');
+		//const paras = document.querySelectorAll('p.highligt18_7');
+		for(let p of paras) {
+			p.classList.remove('highligt18_7');
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
