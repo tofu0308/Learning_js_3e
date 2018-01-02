@@ -109,7 +109,8 @@ console.log("--------18_7-------");
 			if(!containing.test(p.textContent)) continue;
 			p.classList.add('highligt18_7');
 		}
-	}	
+	}
+	higloghtParts('ユニーク')
 }
 
 {
@@ -120,6 +121,7 @@ console.log("--------18_7-------");
 			p.classList.remove('highligt18_7');
 		}
 	}
+	
 }
 
 
