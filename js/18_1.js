@@ -98,7 +98,7 @@ console.log("--------18_6-------");
 console.log("--------18_7-------");
 
 {
-	function higloghtParts(containing) {
+	function higlightParts(containing) {
 		if(typeof containing === 'string') {
 			containing = new RegExp(`${containing}`);
 		}
@@ -110,10 +110,8 @@ console.log("--------18_7-------");
 			p.classList.add('highligt18_7');
 		}
 	}
-	higloghtParts('ユニーク')
-}
+	higlightParts('ユニーク')
 
-{
 	function removeParaHighlights(){
 		const paras = document.getElementsByTagName('p');
 		//const paras = document.querySelectorAll('p.highligt18_7');
@@ -121,13 +119,98 @@ console.log("--------18_7-------");
 			p.classList.remove('highligt18_7');
 		}
 	}	
-}
 
 
 //18_8
 console.log("--------18_8-------");
-{
-	const highlightActions = document.querySelectorAll('[data-action=highlight]');
-	console.log(highlightActions[0].dataset);
+	
+	//const highlightActions = document.querySelectorAll('[data-action=highlight]');
+	//console.log(highlightActions[0].dataset);
+
+//18_9
+console.log("--------18_9-------");
+	const highlightActions = document.querySelectorAll('[data-action="highlight"]');
+	for(let a of highlightActions){
+		a.addEventListener('click', evt =>{
+			evt.preventDefault();
+			higlightParts(a.dataset.containing);
+		});
+	}
+
+	const removeHiglightActions = document.querySelectorAll('[data-action="removeHiglight"]');
+
+	for(let a of removeHiglightActions) {
+		a.addEventListener('click', evt =>{
+			evt.preventDefault();
+			removeParaHighlights();	
+		});
+	}
+
 }
+
+
+//18_9_1
+{
+	 function logEvent(handlerName, type, cancel, stop, stopImmediate){
+	 	return function(evt){
+	 		if(cancel) evt.preventDefault();
+	 		if(stop) evt.stopPropagtion();
+	 		if(stopImmediate) evt.stopImmediatePropagation();
+	 		console.log(`${type} : ${handlerName}` + (evt.defaultPrevented ? '(キャンセルされた)' : ''));
+	 	}
+	 }	
+
+	 function addEventLogger(element, type, action){
+	 	const capture = type === 'capture';
+	 	element.addEventListener('click', logEvent(element.tagName, type, action === 'cancel', action === 'stop', action === 'stop!'), capture);
+
+	 }
+
+	 const body = document.querySelector('body');
+	 const div = document.querySelector('div');
+	 const button = document.querySelector('button');
+
+	 addEventLogger(body, 'capture');
+	 addEventLogger(body, 'bubble');
+	 addEventLogger(div, 'capture');
+	 addEventLogger(div, 'bubble');
+	 addEventLogger(button, 'capture');
+	 addEventLogger(button, 'bubble');
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
