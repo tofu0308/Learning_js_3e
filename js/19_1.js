@@ -29,10 +29,7 @@ console.log("--------19_5-------");
 	$('p:odd').css('color' , 'green');
 
 	$('hr').remove();
-
 	$('p').after('<hr />').append('<sup>++++</sup>').filter(':odd').css('color', 'pink');
-
-
-
+	$('p').after('<hr />').not('.highlight').css('margin-left', '72px');
 
 }
