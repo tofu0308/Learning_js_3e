@@ -33,3 +33,18 @@ console.log("--------19_5-------");
 	$('p').after('<hr />').not('.highlight').css('margin-left', '72px');
 
 }
+
+//19_6
+console.log("--------19_6-------");
+{
+	const para2 = $('p').get(1);
+	console.log(`2番目の段落＝${para2.innerHTML}`);
+
+	console.log("-----");
+
+	const paras = $('p').get();
+	for(let i=0; i<paras.length; i++){
+		console.log(`${i+1}番目の段落＝${paras[i].innerHTML}`)
+	}
+}
+
