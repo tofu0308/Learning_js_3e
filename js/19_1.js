@@ -8,6 +8,20 @@ console.log("--------19_4-------");
 		console.log(typeof $paras);
 		console.log($paras instanceof $);
 		console.log($paras instanceof jQuery);
-
 	});
+}
+
+//19_5
+console.log("--------19_5-------");
+{
+	$('p').text('全ての段落を置き換え')
+	$('p').html('<span style="color:red;">段落置き換え、htmlメソッド版</span>');
+	$('p').eq(2).html('<span style="color:blue;">ここだけ青</span>');
+
+	$('p').last().remove();
+	$('p').first().append('<sup>*</sup>');
+	$('p').after('<hr />').before('<hr />');
+
+	
+
 }
