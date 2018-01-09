@@ -22,6 +22,17 @@ console.log("--------19_5-------");
 	$('p').first().append('<sup>*</sup>');
 	$('p').after('<hr />').before('<hr />');
 
-	
+	$('<sup>**</sup>').appendTo('p');
+	$('<hr />').insertBefore('p');
+	$('<hr />').insertAfter('p');
+
+	$('p:odd').css('color' , 'green');
+
+	$('hr').remove();
+
+	$('p').after('<hr />').append('<sup>++++</sup>').filter(':odd').css('color', 'pink');
+
+
+
 
 }
